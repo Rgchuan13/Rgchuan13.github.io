@@ -1,6 +1,6 @@
 [input]
 base_directory = "D:/SOFTWARE_PRUDUCT/GithubDesktop/repository/rgchuan13.github.io/output"
-html_selector = "title"
+html_selector = "main"
 
 [[input.files]]
 path = "pages/about.html"
