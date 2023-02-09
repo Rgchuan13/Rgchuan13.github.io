@@ -15,9 +15,9 @@ title = "events"
 [[input.files]]
 path = "commonly_used_tools_memo.html"
 url = "/commonly_used_tools_memo.html"
-title = "commonly used tools memo"
+title = "小工具操作备忘"
 
 [[input.files]]
 path = "graduation_project_memo.html"
 url = "/graduation_project_memo.html"
-title = "graduation project memo"
+title = "基于 CycloneV 的 SoC 数字系统设计（毕设备忘）"
