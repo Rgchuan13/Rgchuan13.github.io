@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Hi,Rg</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2023-02-08T19:00:00+08:00</updated><entry><title>小工具操作备忘</title><link href="/commonly_used_tools_memo.html" rel="alternate"></link><published>2023-02-08T19:00:00+08:00</published><updated>2023-02-08T19:00:00+08:00</updated><author><name>RongChuan</name></author><id>tag:None,2023-02-08:/commonly_used_tools_memo.html</id><summary type="html">&lt;p&gt;some tips for commonly used tools&lt;/p&gt;</summary><content type="html">&lt;ul&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Hi,Rg</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2023-02-08T19:00:00+08:00</updated><entry><title>小工具操作备忘</title><link href="/commonly_used_tools_memo.html" rel="alternate"></link><published>2023-02-08T19:00:00+08:00</published><updated>2023-02-08T19:00:00+08:00</updated><author><name>RongChuan</name></author><id>tag:None,2023-02-08:/commonly_used_tools_memo.html</id><summary type="html">&lt;p&gt;some tips for commonly used&amp;nbsp;tools&lt;/p&gt;</summary><content type="html">&lt;ul&gt;
 &lt;li&gt;&lt;a href="#常用工具指南"&gt;常用工具指南&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#1-pelican-blog"&gt;1 pelican blog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#1-pelican-blog"&gt;1 pelican&amp;nbsp;blog&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#2-python"&gt;2 python&lt;/a&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href="#21-virtualenvwrapper"&gt;2.1 virtualenvwrapper&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#21-virtualenvwrapper"&gt;2.1&amp;nbsp;virtualenvwrapper&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -11,24 +11,24 @@
 &lt;blockquote&gt;
 &lt;p&gt;用于记录一些常用工具的操作记录&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2&gt;1 pelican blog&lt;/h2&gt;
+&lt;h2&gt;1 pelican&amp;nbsp;blog&lt;/h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;github 博客框架&lt;/p&gt;
+&lt;p&gt;github&amp;nbsp;博客框架&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;a href="https://docs.getpelican.com/en/stable/content.html#file-metadata"&gt;pelican文档&lt;/a&gt;
 &lt;a href="https://markdown.com.cn/"&gt;markdown语法速查&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;进入pelican环境: &lt;strong&gt;workon pelican&lt;/strong&gt;
 本地预览网站: &lt;strong&gt;make devserve&lt;/strong&gt;
-发布网站:在项目根目录下执行 &lt;strong&gt;make github&lt;/strong&gt;&lt;/p&gt;
-&lt;h2&gt;2 python&lt;/h2&gt;
-&lt;h3&gt;2.1 virtualenvwrapper&lt;/h3&gt;
+发布网站:在项目根目录下执行 &lt;strong&gt;make&amp;nbsp;github&lt;/strong&gt;&lt;/p&gt;
+&lt;h2&gt;2&amp;nbsp;python&lt;/h2&gt;
+&lt;h3&gt;2.1&amp;nbsp;virtualenvwrapper&lt;/h3&gt;
 &lt;blockquote&gt;
-&lt;p&gt;virtualenvwrapper 基于 virtualenv ,可以更方便的管理python虚拟环境，windows环境下安装 virtualenv-win&lt;/p&gt;
+&lt;p&gt;virtualenvwrapper 基于 virtualenv ,可以更方便的管理python虚拟环境，windows环境下安装&amp;nbsp;virtualenv-win&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;a href="https://virtualenvwrapper.readthedocs.io/en/latest/command_ref.html"&gt;virtualenvwrapper命令的完全列表&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;常用命令：
 - &lt;strong&gt;mkvirtualenv env&lt;/strong&gt; 创建虚拟环境
-- &lt;strong&gt;mkvirtualenv env --python=python3.10&lt;/strong&gt; 选择python解释器
+- &lt;strong&gt;mkvirtualenv env &amp;#8212;python=python3.10&lt;/strong&gt; 选择python解释器
 - &lt;strong&gt;lsvirtualenv&lt;/strong&gt;/&lt;strong&gt;workon&lt;/strong&gt; 查看虚拟环境
 - &lt;strong&gt;workon env&lt;/strong&gt; 进入虚拟环境
 - &lt;strong&gt;deactivate&lt;/strong&gt; 退出虚拟环境
@@ -36,18 +36,18 @@
 - &lt;strong&gt;pip list&lt;/strong&gt; 查看虚拟环境下的安装包
 - &lt;strong&gt;cdvirtualenv&lt;/strong&gt;
 - &lt;strong&gt;cdsitepackages&lt;/strong&gt;
-- &lt;strong&gt;lssitepackages&lt;/strong&gt;&lt;/p&gt;</content><category term="memo"></category><category term="tools"></category><category term="tips"></category></entry><entry><title>基于 CycloneV 的 SoC 数字系统设计（毕设备忘）</title><link href="/graduation_project_memo.html" rel="alternate"></link><published>2023-01-06T19:00:00+08:00</published><updated>2023-01-06T19:00:00+08:00</updated><author><name>RongChuan</name></author><id>tag:None,2023-01-06:/graduation_project_memo.html</id><summary type="html">&lt;p&gt;graduation_project memo&lt;/p&gt;</summary><content type="html">&lt;ul&gt;
+- &lt;strong&gt;lssitepackages&lt;/strong&gt;&lt;/p&gt;</content><category term="memo"></category><category term="tools"></category><category term="tips"></category></entry><entry><title>基于 CycloneV 的 SoC 数字系统设计（毕设备忘）</title><link href="/graduation_project_memo.html" rel="alternate"></link><published>2023-01-06T19:00:00+08:00</published><updated>2023-01-06T19:00:00+08:00</updated><author><name>RongChuan</name></author><id>tag:None,2023-01-06:/graduation_project_memo.html</id><summary type="html">&lt;p&gt;graduation_project&amp;nbsp;memo&lt;/p&gt;</summary><content type="html">&lt;ul&gt;
 &lt;li&gt;&lt;a href="#毕业设计记录"&gt;毕业设计记录&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#11-关于cyclonev-中的问题"&gt;1.1 关于cycloneV 中的问题&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#附1-学习资源链接"&gt;附1 学习资源链接&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#11-关于cyclonev-中的问题"&gt;1.1 关于cycloneV&amp;nbsp;中的问题&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#附1-学习资源链接"&gt;附1&amp;nbsp;学习资源链接&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1&gt;毕业设计记录&lt;/h1&gt;
 &lt;blockquote&gt;
-&lt;p&gt;本文档用于记录soc fpga 设计中遇到的常见问题&lt;/p&gt;
+&lt;p&gt;本文档用于记录soc fpga&amp;nbsp;设计中遇到的常见问题&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2&gt;1.1 关于cycloneV 中的问题&lt;/h2&gt;
+&lt;h2&gt;1.1 关于cycloneV&amp;nbsp;中的问题&lt;/h2&gt;
 &lt;p&gt;&lt;img alt="cycloneV SX 编码含义" src="/images/memo/sample_ordering_code.png"&gt;&lt;/p&gt;
-&lt;h2&gt;附1 学习资源链接&lt;/h2&gt;
+&lt;h2&gt;附1&amp;nbsp;学习资源链接&lt;/h2&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;a href="https://blog.csdn.net/recclay/category_9848917.html"&gt;csdn网站上关于小梅哥SOC FPGA的文档&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://blog.csdn.net/recclay/category_9848917.html"&gt;csdn网站上关于小梅哥SOC&amp;nbsp;FPGA的文档&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;</content><category term="memo"></category><category term="FPGA"></category><category term="SoC"></category></entry></feed>
