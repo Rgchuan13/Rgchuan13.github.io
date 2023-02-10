@@ -125,7 +125,15 @@
               prose-code:font-light
               prose-img:rounded-md
               ">
-    <h1>常用工具指南</h1>
+    <ul>
+<li><a href="#常用工具指南">常用工具指南</a></li>
+<li><a href="#1-pelican-blog">1 pelican blog</a></li>
+<li><a href="#2-python">2 python</a><ul>
+<li><a href="#21-virtualenvwrapper">2.1 virtualenvwrapper</a></li>
+</ul>
+</li>
+</ul>
+<h1>常用工具指南</h1>
 <blockquote>
 <p>用于记录一些常用工具的操作记录</p>
 </blockquote>
@@ -133,8 +141,11 @@
 <blockquote>
 <p>github 博客框架</p>
 </blockquote>
-<p><a href="https://docs.getpelican.com/en/stable/content.html#file-metadata">pelican文档</a></p>
-<p>发布网站:在项目根目录下执行 <strong>make github</strong></p>
+<p><a href="https://docs.getpelican.com/en/stable/content.html#file-metadata">pelican文档</a>
+<a href="https://markdown.com.cn/">markdown语法速查</a></p>
+<p>进入pelican环境: <strong>workon pelican</strong>
+本地预览网站: <strong>make devserve</strong>
+发布网站:在项目根目录下执行 <strong>make github</strong></p>
 <h2>2 python</h2>
 <h3>2.1 virtualenvwrapper</h3>
 <blockquote>
@@ -142,16 +153,16 @@
 </blockquote>
 <p><a href="https://virtualenvwrapper.readthedocs.io/en/latest/command_ref.html">virtualenvwrapper命令的完全列表</a></p>
 <p>常用命令：
-* <strong>mkvirtualenv env</strong> 创建虚拟环境
-* <strong>mkvirtualenv env --python=python3.10</strong> 选择python解释器
-* <strong>lsvirtualenv</strong>/<strong>workon</strong> 查看虚拟环境
-* <strong>workon env</strong> 进入虚拟环境
-* <strong>deactivate</strong> 退出虚拟环境
-* <strong>rmvirtualenv env</strong> 删除虚拟环境
-* <strong>pip list</strong> 查看虚拟环境下的安装包
-* <strong>cdvirtualenv</strong>
-* <strong>cdsitepackages</strong>
-* <strong>lssitepackages</strong></p>
+- <strong>mkvirtualenv env</strong> 创建虚拟环境
+- <strong>mkvirtualenv env --python=python3.10</strong> 选择python解释器
+- <strong>lsvirtualenv</strong>/<strong>workon</strong> 查看虚拟环境
+- <strong>workon env</strong> 进入虚拟环境
+- <strong>deactivate</strong> 退出虚拟环境
+- <strong>rmvirtualenv env</strong> 删除虚拟环境
+- <strong>pip list</strong> 查看虚拟环境下的安装包
+- <strong>cdvirtualenv</strong>
+- <strong>cdsitepackages</strong>
+- <strong>lssitepackages</strong></p>
     <!-- <div class="aspect-w-16 aspect-h-9 mx-auto"></div> CSS placeholder -->
   </div>
   <footer class="flex flex-col mt-10 ">
