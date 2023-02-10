@@ -10,7 +10,7 @@ title = "About"
 [[input.files]]
 path = "pages/events.html"
 url = "/pages/events.html"
-title = "events"
+title = "Events"
 
 [[input.files]]
 path = "commonly_used_tools_memo.html"
