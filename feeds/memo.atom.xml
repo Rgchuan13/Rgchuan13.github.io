@@ -16,7 +16,7 @@
 &lt;p&gt;github&amp;nbsp;博客框架&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;a href="https://docs.getpelican.com/en/stable/content.html#file-metadata"&gt;pelican文档&lt;/a&gt;
-&lt;a href="https://markdown.com.cn/"&gt;markdown语法速查&lt;/a&gt;&lt;/p&gt;
+&lt;a href="https://daringfireball.net/projects/markdown/syntax"&gt;markdown语法速查&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;进入pelican环境: &lt;strong&gt;workon pelican&lt;/strong&gt;
 本地预览网站: &lt;strong&gt;make devserve&lt;/strong&gt;
 发布网站:在项目根目录下执行 &lt;strong&gt;make&amp;nbsp;github&lt;/strong&gt;&lt;/p&gt;
@@ -27,7 +27,7 @@
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;a href="https://virtualenvwrapper.readthedocs.io/en/latest/command_ref.html"&gt;virtualenvwrapper命令的完全列表&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;常用命令：
-- &lt;strong&gt;mkvirtualenv env&lt;/strong&gt; 创建虚拟环境
++ &lt;strong&gt;mkvirtualenv env&lt;/strong&gt; 创建虚拟环境
 - &lt;strong&gt;mkvirtualenv env &amp;#8212;python=python3.10&lt;/strong&gt; 选择python解释器
 - &lt;strong&gt;lsvirtualenv&lt;/strong&gt;/&lt;strong&gt;workon&lt;/strong&gt; 查看虚拟环境
 - &lt;strong&gt;workon env&lt;/strong&gt; 进入虚拟环境
