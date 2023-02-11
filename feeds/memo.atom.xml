@@ -50,7 +50,12 @@
 &lt;p&gt;本文档用于记录soc fpga&amp;nbsp;设计中遇到的常见问题&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2&gt;1.1 关于cycloneV&amp;nbsp;中的问题&lt;/h2&gt;
-&lt;p&gt;&lt;img alt="cycloneV SX 编码含义" src="/images/memo/sample_ordering_code.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;DE10&lt;/span&gt;-standard 所用芯片型号为： &lt;code&gt;Intel Cyclone® V SX 5CSXFC6D6F31C6N&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="cycloneV SX 编码含义" src="/images/memo/sample_ordering_code.png"&gt;
+&lt;center&gt;cycloneV编码含义&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;嵌入式存储器资源：&lt;span class="caps"&gt;M10K&lt;/span&gt;，&lt;span class="caps"&gt;MLAB&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;时钟网络：全局时钟(&lt;span class="caps"&gt;GCLK&lt;/span&gt;)网络、局域时钟(&lt;span class="caps"&gt;RCLK&lt;/span&gt;)网络、外设时钟(&lt;span class="caps"&gt;PCLK&lt;/span&gt;)网络&lt;/p&gt;
+&lt;p&gt;&lt;span class="caps"&gt;MSEL&lt;/span&gt;[0:4]: &lt;code&gt;Tie the MSEL pins to GND if your device is using the JTAG configuration scheme.&lt;/code&gt;&lt;/p&gt;
 &lt;h2&gt;附1&amp;nbsp;学习资源链接&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="https://blog.csdn.net/recclay/category_9848917.html"&gt;csdn网站上关于小梅哥SOC&amp;nbsp;FPGA的文档&lt;/a&gt;&lt;/li&gt;

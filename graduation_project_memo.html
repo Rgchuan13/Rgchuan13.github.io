@@ -135,7 +135,12 @@
 <p>本文档用于记录soc fpga&nbsp;设计中遇到的常见问题</p>
 </blockquote>
 <h2>1.1 关于cycloneV&nbsp;中的问题</h2>
-<p><img alt="cycloneV SX 编码含义" src="/images/memo/sample_ordering_code.png"></p>
+<p><span class="caps">DE10</span>-standard 所用芯片型号为： <code>Intel Cyclone® V SX 5CSXFC6D6F31C6N</code></p>
+<p><img alt="cycloneV SX 编码含义" src="/images/memo/sample_ordering_code.png">
+<center>cycloneV编码含义</center></p>
+<p>嵌入式存储器资源：<span class="caps">M10K</span>，<span class="caps">MLAB</span></p>
+<p>时钟网络：全局时钟(<span class="caps">GCLK</span>)网络、局域时钟(<span class="caps">RCLK</span>)网络、外设时钟(<span class="caps">PCLK</span>)网络</p>
+<p><span class="caps">MSEL</span>[0:4]: <code>Tie the MSEL pins to GND if your device is using the JTAG configuration scheme.</code></p>
 <h2>附1&nbsp;学习资源链接</h2>
 <ol>
 <li><a href="https://blog.csdn.net/recclay/category_9848917.html">csdn网站上关于小梅哥SOC&nbsp;FPGA的文档</a></li>
