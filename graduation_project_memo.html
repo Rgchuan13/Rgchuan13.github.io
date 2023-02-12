@@ -141,6 +141,15 @@
 <p>嵌入式存储器资源：<span class="caps">M10K</span>，<span class="caps">MLAB</span></p>
 <p>时钟网络：全局时钟(<span class="caps">GCLK</span>)网络、局域时钟(<span class="caps">RCLK</span>)网络、外设时钟(<span class="caps">PCLK</span>)网络</p>
 <p><span class="caps">MSEL</span>[0:4]: <code>Tie the MSEL pins to GND if your device is using the JTAG configuration scheme.</code></p>
+<p>供电模式：HPS可独立上电启动，FPGA必须在HPS启动的前提下启动</p>
+<p>引导和配置：</p>
+<ul>
+<li>FPGA和HPS单独引导</li>
+<li>FPGA首先引导，再由FPGA内部资源引导HPS</li>
+<li>HPS首先引导，再由非FPGA内部资源引导FPGA（闪存或通信接口） </li>
+</ul>
+<p><img alt="HPS引导典型引导流程" src="/images/memo/典型引导流程.png"></p>
+<p><code>BSEL</code>引导选择，<code>CSEL</code>时钟选择</p>
 <h2>附1&nbsp;学习资源链接</h2>
 <ol>
 <li><a href="https://blog.csdn.net/recclay/category_9848917.html">csdn网站上关于小梅哥SOC&nbsp;FPGA的文档</a></li>
