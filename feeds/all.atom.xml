@@ -128,16 +128,56 @@
 &lt;img alt="外设区域地址映射表2" src="/images/memo/外设区域地址映射表2.png"&gt;&lt;/p&gt;
 &lt;h2&gt;2.&amp;nbsp;关于DE10—standard开发板上的问题&lt;/h2&gt;
 &lt;p&gt;时钟资源&lt;/p&gt;
-&lt;p&gt;&lt;img alt="DE10-Standard 时钟分配方框图" src="/images/memo/DE10-Standard 时钟分配方框图.png"&gt;
-时钟输入引脚分配
-| 信号名        | &lt;span class="caps"&gt;FPGA&lt;/span&gt; 引脚号 | 描述   | I/O 标准      |
-| &amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;- | &amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;- | &amp;#8212;&amp;#8212;&amp;#8212; | &amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;- |
-| CLOCK_50      | PIN_AF14    | 50 MHz | 时钟输入 3.3V |
-| CLOCK2_50     | PIN_AA16    | 50 MHz | 时钟输入 3.3V |
-| CLOCK3_50     | PIN_Y26     | 50 MHz | 时钟输入 3.3V |
-| CLOCK4_50     | PIN_K14     | 50 MHz | 时钟输入 3.3V |
-| HPS_CLOCK1_25 | PIN_D25     | 25 MHz | 时钟输入 3.3V |
-| HPS_CLOCK2_25 | PIN_F25     | 25 MHz | 时钟输入 3.3V&amp;nbsp;|&lt;/p&gt;
+&lt;p&gt;&lt;img alt="DE10-Standard 时钟分配方框图" src="/images/memo/DE10-Standard 时钟分配方框图.png"&gt;&lt;/p&gt;
+&lt;p&gt;时钟输入引脚分配&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;信号名&lt;/th&gt;
+&lt;th&gt;&lt;span class="caps"&gt;FPGA&lt;/span&gt; 引脚号&lt;/th&gt;
+&lt;th&gt;描述&lt;/th&gt;
+&lt;th&gt;I/O 标准&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;CLOCK_50&lt;/td&gt;
+&lt;td&gt;PIN_AF14&lt;/td&gt;
+&lt;td&gt;50 MHz&lt;/td&gt;
+&lt;td&gt;时钟输入 3.3V&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;CLOCK2_50&lt;/td&gt;
+&lt;td&gt;PIN_AA16&lt;/td&gt;
+&lt;td&gt;50 MHz&lt;/td&gt;
+&lt;td&gt;时钟输入 3.3V&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;CLOCK3_50&lt;/td&gt;
+&lt;td&gt;PIN_Y26&lt;/td&gt;
+&lt;td&gt;50 MHz&lt;/td&gt;
+&lt;td&gt;时钟输入 3.3V&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;CLOCK4_50&lt;/td&gt;
+&lt;td&gt;PIN_K14&lt;/td&gt;
+&lt;td&gt;50 MHz&lt;/td&gt;
+&lt;td&gt;时钟输入 3.3V&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;HPS_CLOCK1_25&lt;/td&gt;
+&lt;td&gt;PIN_D25&lt;/td&gt;
+&lt;td&gt;25 MHz&lt;/td&gt;
+&lt;td&gt;时钟输入 3.3V&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;HPS_CLOCK2_25&lt;/td&gt;
+&lt;td&gt;PIN_F25&lt;/td&gt;
+&lt;td&gt;25 MHz&lt;/td&gt;
+&lt;td&gt;时钟输入 3.3V&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 &lt;h2&gt;附1&amp;nbsp;学习资源链接&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="https://blog.csdn.net/recclay/category_9848917.html"&gt;csdn网站上关于小梅哥SOC&amp;nbsp;FPGA的文档&lt;/a&gt;&lt;/li&gt;
