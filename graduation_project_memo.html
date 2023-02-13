@@ -149,7 +149,43 @@
 <li>HPS首先引导，再由非FPGA内部资源引导FPGA（闪存或通信接口） </li>
 </ul>
 <p><img alt="HPS引导典型引导流程" src="/images/memo/典型引导流程.png"></p>
+<p>CycloneV_HPS_Block_Diagram</p>
+<p><img alt="CycloneV_HPS_Block_Diagram" src="/images/memo/cycloneV_HPS_Block_Diagram.png"></p>
 <p><code>BSEL</code>引导选择，<code>CSEL</code>时钟选择</p>
+<p>HPS中处理器应当配置为little-endian</p>
+<p><span class="caps">HPS</span>-FPGA接口均为AXI总线</p>
+<p><span class="caps">FPGA</span>-to-<span class="caps">HPS</span> <span class="caps">SDRAM</span> <span class="caps">AXI</span>-3/Avalon-<span class="caps">MM</span>（存储器映射）</p>
+<p>通用地址空间区域</p>
+<table>
+<thead>
+<tr>
+<th>标识符</th>
+<th>区域名称</th>
+<th>基地址</th>
+<th>容量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="caps">FPGASLAVES</span></td>
+<td><span class="caps">FPGA</span> 从器件</td>
+<td>0xC0000000</td>
+<td>960 <span class="caps">MB</span></td>
+</tr>
+<tr>
+<td><span class="caps">LWFPGASLAVES</span></td>
+<td>轻型 <span class="caps">FPGA</span> 从器件</td>
+<td>0xFF200000</td>
+<td>2 <span class="caps">MB</span></td>
+</tr>
+<tr>
+<td><span class="caps">PERIPH</span></td>
+<td>外设</td>
+<td>0xFC000000</td>
+<td>64 <span class="caps">MB</span></td>
+</tr>
+</tbody>
+</table>
 <h2>附1&nbsp;学习资源链接</h2>
 <ol>
 <li><a href="https://blog.csdn.net/recclay/category_9848917.html">csdn网站上关于小梅哥SOC&nbsp;FPGA的文档</a></li>
