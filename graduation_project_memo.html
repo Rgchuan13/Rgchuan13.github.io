@@ -127,20 +127,42 @@
               ">
     <ul>
 <li><a href="#毕业设计记录">毕业设计记录</a></li>
-<li><a href="#11-关于cyclonev-中的问题">1.1 关于cycloneV&nbsp;中的问题</a></li>
+<li><a href="#1-关于cyclonev-中的问题">1. 关于cycloneV&nbsp;中的问题</a></li>
+<li><a href="#2-关于de10standard开发板上的问题">2.&nbsp;关于DE10—standard开发板上的问题</a></li>
 <li><a href="#附1-学习资源链接">附1&nbsp;学习资源链接</a></li>
 </ul>
 <h1>毕业设计记录</h1>
 <blockquote>
 <p>本文档用于记录soc fpga&nbsp;设计中遇到的常见问题</p>
 </blockquote>
-<h2>1.1 关于cycloneV&nbsp;中的问题</h2>
+<h2>1. 关于cycloneV&nbsp;中的问题</h2>
 <p><span class="caps">DE10</span>-standard 所用芯片型号为： <code>Intel Cyclone® V SX 5CSXFC6D6F31C6N</code></p>
 <p><img alt="cycloneV SX 编码含义" src="/images/memo/sample_ordering_code.png">
 <center>cycloneV编码含义</center></p>
 <p>嵌入式存储器资源：<span class="caps">M10K</span>，<span class="caps">MLAB</span></p>
 <p>时钟网络：全局时钟(<span class="caps">GCLK</span>)网络、局域时钟(<span class="caps">RCLK</span>)网络、外设时钟(<span class="caps">PCLK</span>)网络</p>
 <p><span class="caps">MSEL</span>[0:4]: <code>Tie the MSEL pins to GND if your device is using the JTAG configuration scheme.</code></p>
+<table>
+<thead>
+<tr>
+<th><span class="caps">MSEL</span>[4:0]</th>
+<th>配置模式</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10010</td>
+<td><span class="caps">AS</span></td>
+<td>从 <span class="caps">EPCS</span> 配置 <span class="caps">FPGA</span> (默认)</td>
+</tr>
+<tr>
+<td>01010</td>
+<td>FPPx32</td>
+<td>从 <span class="caps">HPS</span> 配置 <span class="caps">FPGA</span></td>
+</tr>
+</tbody>
+</table>
 <p>供电模式：HPS可独立上电启动，FPGA必须在HPS启动的前提下启动</p>
 <p>引导和配置：</p>
 <ul>
@@ -189,6 +211,18 @@
 <p>外设区域地址映射</p>
 <p><img alt="外设区域地址映射表1" src="/images/memo/外设区域地址映射表1.png">
 <img alt="外设区域地址映射表2" src="/images/memo/外设区域地址映射表2.png"></p>
+<h2>2.&nbsp;关于DE10—standard开发板上的问题</h2>
+<p>时钟资源</p>
+<p><img alt="DE10-Standard 时钟分配方框图" src="/images/memo/DE10-Standard 时钟分配方框图.png">
+时钟输入引脚分配
+| 信号名        | <span class="caps">FPGA</span> 引脚号 | 描述   | I/O 标准      |
+| &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;- | &#8212;&#8212;&#8212;&#8212;&#8212;- | &#8212;&#8212;&#8212; | &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;- |
+| CLOCK_50      | PIN_AF14    | 50 MHz | 时钟输入 3.3V |
+| CLOCK2_50     | PIN_AA16    | 50 MHz | 时钟输入 3.3V |
+| CLOCK3_50     | PIN_Y26     | 50 MHz | 时钟输入 3.3V |
+| CLOCK4_50     | PIN_K14     | 50 MHz | 时钟输入 3.3V |
+| HPS_CLOCK1_25 | PIN_D25     | 25 MHz | 时钟输入 3.3V |
+| HPS_CLOCK2_25 | PIN_F25     | 25 MHz | 时钟输入 3.3V&nbsp;|</p>
 <h2>附1&nbsp;学习资源链接</h2>
 <ol>
 <li><a href="https://blog.csdn.net/recclay/category_9848917.html">csdn网站上关于小梅哥SOC&nbsp;FPGA的文档</a></li>

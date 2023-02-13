@@ -42,20 +42,42 @@
 &lt;li&gt;&lt;strong&gt;lssitepackages&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;</content><category term="memo"></category><category term="tools"></category><category term="tips"></category></entry><entry><title>基于 CycloneV 的 SoC 数字系统设计（毕设备忘）</title><link href="/graduation_project_memo.html" rel="alternate"></link><published>2023-01-06T19:00:00+08:00</published><updated>2023-01-06T19:00:00+08:00</updated><author><name>RongChuan</name></author><id>tag:None,2023-01-06:/graduation_project_memo.html</id><summary type="html">&lt;p&gt;graduation_project&amp;nbsp;memo&lt;/p&gt;</summary><content type="html">&lt;ul&gt;
 &lt;li&gt;&lt;a href="#毕业设计记录"&gt;毕业设计记录&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#11-关于cyclonev-中的问题"&gt;1.1 关于cycloneV&amp;nbsp;中的问题&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#1-关于cyclonev-中的问题"&gt;1. 关于cycloneV&amp;nbsp;中的问题&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#2-关于de10standard开发板上的问题"&gt;2.&amp;nbsp;关于DE10—standard开发板上的问题&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#附1-学习资源链接"&gt;附1&amp;nbsp;学习资源链接&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1&gt;毕业设计记录&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;p&gt;本文档用于记录soc fpga&amp;nbsp;设计中遇到的常见问题&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2&gt;1.1 关于cycloneV&amp;nbsp;中的问题&lt;/h2&gt;
+&lt;h2&gt;1. 关于cycloneV&amp;nbsp;中的问题&lt;/h2&gt;
 &lt;p&gt;&lt;span class="caps"&gt;DE10&lt;/span&gt;-standard 所用芯片型号为： &lt;code&gt;Intel Cyclone® V SX 5CSXFC6D6F31C6N&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img alt="cycloneV SX 编码含义" src="/images/memo/sample_ordering_code.png"&gt;
 &lt;center&gt;cycloneV编码含义&lt;/center&gt;&lt;/p&gt;
 &lt;p&gt;嵌入式存储器资源：&lt;span class="caps"&gt;M10K&lt;/span&gt;，&lt;span class="caps"&gt;MLAB&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;时钟网络：全局时钟(&lt;span class="caps"&gt;GCLK&lt;/span&gt;)网络、局域时钟(&lt;span class="caps"&gt;RCLK&lt;/span&gt;)网络、外设时钟(&lt;span class="caps"&gt;PCLK&lt;/span&gt;)网络&lt;/p&gt;
 &lt;p&gt;&lt;span class="caps"&gt;MSEL&lt;/span&gt;[0:4]: &lt;code&gt;Tie the MSEL pins to GND if your device is using the JTAG configuration scheme.&lt;/code&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;span class="caps"&gt;MSEL&lt;/span&gt;[4:0]&lt;/th&gt;
+&lt;th&gt;配置模式&lt;/th&gt;
+&lt;th&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;10010&lt;/td&gt;
+&lt;td&gt;&lt;span class="caps"&gt;AS&lt;/span&gt;&lt;/td&gt;
+&lt;td&gt;从 &lt;span class="caps"&gt;EPCS&lt;/span&gt; 配置 &lt;span class="caps"&gt;FPGA&lt;/span&gt; (默认)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;01010&lt;/td&gt;
+&lt;td&gt;FPPx32&lt;/td&gt;
+&lt;td&gt;从 &lt;span class="caps"&gt;HPS&lt;/span&gt; 配置 &lt;span class="caps"&gt;FPGA&lt;/span&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 &lt;p&gt;供电模式：HPS可独立上电启动，FPGA必须在HPS启动的前提下启动&lt;/p&gt;
 &lt;p&gt;引导和配置：&lt;/p&gt;
 &lt;ul&gt;
@@ -104,6 +126,18 @@
 &lt;p&gt;外设区域地址映射&lt;/p&gt;
 &lt;p&gt;&lt;img alt="外设区域地址映射表1" src="/images/memo/外设区域地址映射表1.png"&gt;
 &lt;img alt="外设区域地址映射表2" src="/images/memo/外设区域地址映射表2.png"&gt;&lt;/p&gt;
+&lt;h2&gt;2.&amp;nbsp;关于DE10—standard开发板上的问题&lt;/h2&gt;
+&lt;p&gt;时钟资源&lt;/p&gt;
+&lt;p&gt;&lt;img alt="DE10-Standard 时钟分配方框图" src="/images/memo/DE10-Standard 时钟分配方框图.png"&gt;
+时钟输入引脚分配
+| 信号名        | &lt;span class="caps"&gt;FPGA&lt;/span&gt; 引脚号 | 描述   | I/O 标准      |
+| &amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;- | &amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;- | &amp;#8212;&amp;#8212;&amp;#8212; | &amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;- |
+| CLOCK_50      | PIN_AF14    | 50 MHz | 时钟输入 3.3V |
+| CLOCK2_50     | PIN_AA16    | 50 MHz | 时钟输入 3.3V |
+| CLOCK3_50     | PIN_Y26     | 50 MHz | 时钟输入 3.3V |
+| CLOCK4_50     | PIN_K14     | 50 MHz | 时钟输入 3.3V |
+| HPS_CLOCK1_25 | PIN_D25     | 25 MHz | 时钟输入 3.3V |
+| HPS_CLOCK2_25 | PIN_F25     | 25 MHz | 时钟输入 3.3V&amp;nbsp;|&lt;/p&gt;
 &lt;h2&gt;附1&amp;nbsp;学习资源链接&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="https://blog.csdn.net/recclay/category_9848917.html"&gt;csdn网站上关于小梅哥SOC&amp;nbsp;FPGA的文档&lt;/a&gt;&lt;/li&gt;
