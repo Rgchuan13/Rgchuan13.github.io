@@ -44,6 +44,12 @@
 &lt;li&gt;&lt;a href="#毕业设计记录"&gt;毕业设计记录&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#1-关于cyclonev-中的问题"&gt;1. 关于cycloneV&amp;nbsp;中的问题&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#2-关于de10standard开发板上的问题"&gt;2.&amp;nbsp;关于DE10—standard开发板上的问题&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#3关于各个ip核的配置问题"&gt;3.关于各个IP核的配置问题&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#4关于各类接口协议的问题"&gt;4.关于各类接口协议的问题&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#41-avalon-接口"&gt;4.1 Avalon&amp;nbsp;接口&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#5关于设计中的注意事项"&gt;5.关于设计中的注意事项&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#附1-学习资源链接"&gt;附1&amp;nbsp;学习资源链接&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1&gt;毕业设计记录&lt;/h1&gt;
@@ -180,6 +186,43 @@
 &lt;/table&gt;
 &lt;p&gt;时钟管理器结构图和系统集成&lt;/p&gt;
 &lt;p&gt;&lt;img alt="时钟管理器结构图和系统集成" src="/images/memo/时钟管理器结构图和系统集成.png"&gt;&lt;/p&gt;
+&lt;h2&gt;3.关于各个IP核的配置问题&lt;/h2&gt;
+&lt;h2&gt;4.关于各类接口协议的问题&lt;/h2&gt;
+&lt;h3&gt;4.1 Avalon&amp;nbsp;接口&lt;/h3&gt;
+&lt;p&gt;七个接口：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Avalon Streaming Interface ( Avalon -&lt;span class="caps"&gt;ST&lt;/span&gt;)—支持单向数据流的接口，包括多路复用流，数
+据包和 &lt;span class="caps"&gt;DSP&lt;/span&gt;&amp;nbsp;数据。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Avalon Memory Mapped Interface ( Avalon -&lt;span class="caps"&gt;MM&lt;/span&gt;)—基于地址的读/写接口&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Avalon Conduit Interface—适用于不适配任何其他 Avalon 类型的单个信号或信号组的接口
+类型。您可以在 Platform Designer 系统内部连接管道接口(conduit interface)。或者，可以
+将它们导出以连接到设计中的其他模块或者连接到 &lt;span class="caps"&gt;FPGA&lt;/span&gt;&amp;nbsp;管脚。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Avalon Tri-State Conduit Interface ( Avalon -&lt;span class="caps"&gt;TC&lt;/span&gt;) —支持与片外（off-chip）外设连接的
+接口。多个外设可以通过信号多路复用(signal multiplexing)来共享管脚，从而减少 &lt;span class="caps"&gt;FPGA&lt;/span&gt; 的
+管脚数和 &lt;span class="caps"&gt;PCB&lt;/span&gt;&amp;nbsp;上的走线数量。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Avalon Interrupt&amp;nbsp;Interface—允许组件向其他组件发送事件信号的接口。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Avalon Clock&amp;nbsp;Interface—驱动或接收时钟的接口。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Avalon Reset&amp;nbsp;Interface—提供复位连接的接口。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;5.关于设计中的注意事项&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;注意&lt;strong&gt;复位信号&lt;/strong&gt;的连接，不可空置，
+  edge：如果器件处于复位状态并且&lt;code&gt;nCONFIG&lt;/code&gt;或&lt;code&gt;nSTATUS&lt;/code&gt;信号为低电平，那么器件的&lt;code&gt;IDCODE&lt;/code&gt;可能不会被正确的读取。为了正确地读取器件&lt;code&gt;IDCODE&lt;/code&gt;，必须只有在&lt;code&gt;nCONFIG&lt;/code&gt;和&lt;code&gt;nSTSTUS&lt;/code&gt;信号处于高电平时，发出&lt;code&gt;IDCODE&lt;/code&gt;JTAG指令&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2&gt;附1&amp;nbsp;学习资源链接&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="https://blog.csdn.net/recclay/category_9848917.html"&gt;csdn网站上关于小梅哥SOC&amp;nbsp;FPGA的文档&lt;/a&gt;&lt;/li&gt;
