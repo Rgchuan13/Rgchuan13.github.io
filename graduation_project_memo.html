@@ -134,7 +134,8 @@
 <li><a href="#41-avalon-接口">4.1 Avalon&nbsp;接口</a></li>
 </ul>
 </li>
-<li><a href="#5关于设计中的注意事项">5.关于设计中的注意事项</a></li>
+<li><a href="#5关于硬件设计中的注意事项">5.关于硬件设计中的注意事项</a></li>
+<li><a href="#6关于软件开发中的问题">6.关于软件开发中的问题</a></li>
 <li><a href="#附1-学习资源链接">附1&nbsp;学习资源链接</a></li>
 </ul>
 <h1>毕业设计记录</h1>
@@ -303,11 +304,21 @@
 <p>Avalon Reset&nbsp;Interface—提供复位连接的接口。</p>
 </li>
 </ul>
-<h2>5.关于设计中的注意事项</h2>
+<h2>5.关于硬件设计中的注意事项</h2>
 <ul>
 <li>注意<strong>复位信号</strong>的连接，不可空置，
   edge：如果器件处于复位状态并且<code>nCONFIG</code>或<code>nSTATUS</code>信号为低电平，那么器件的<code>IDCODE</code>可能不会被正确的读取。为了正确地读取器件<code>IDCODE</code>，必须只有在<code>nCONFIG</code>和<code>nSTSTUS</code>信号处于高电平时，发出<code>IDCODE</code>JTAG指令</li>
 </ul>
+<h2>6.关于软件开发中的问题</h2>
+<ul>
+<li>用SOPC-creat-header-files生成硬件地址信息</li>
+</ul>
+<p><span class="dquo">&#8220;</span>`#!/bin/sh
+sopc-create-header-files \
+&#8220;./soc_system.sopcinfo&#8221; \
+&#8212;single hps_0.h \
+&#8212;module&nbsp;hps_0</p>
+<p><span class="dquo">&#8220;</span>`</p>
 <h2>附1&nbsp;学习资源链接</h2>
 <ol>
 <li><a href="https://blog.csdn.net/recclay/category_9848917.html">csdn网站上关于小梅哥SOC&nbsp;FPGA的文档</a></li>

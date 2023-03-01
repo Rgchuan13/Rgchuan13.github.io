@@ -49,7 +49,8 @@
 &lt;li&gt;&lt;a href="#41-avalon-接口"&gt;4.1 Avalon&amp;nbsp;接口&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="#5关于设计中的注意事项"&gt;5.关于设计中的注意事项&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#5关于硬件设计中的注意事项"&gt;5.关于硬件设计中的注意事项&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#6关于软件开发中的问题"&gt;6.关于软件开发中的问题&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#附1-学习资源链接"&gt;附1&amp;nbsp;学习资源链接&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1&gt;毕业设计记录&lt;/h1&gt;
@@ -218,11 +219,21 @@
 &lt;p&gt;Avalon Reset&amp;nbsp;Interface—提供复位连接的接口。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;5.关于设计中的注意事项&lt;/h2&gt;
+&lt;h2&gt;5.关于硬件设计中的注意事项&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;注意&lt;strong&gt;复位信号&lt;/strong&gt;的连接，不可空置，
   edge：如果器件处于复位状态并且&lt;code&gt;nCONFIG&lt;/code&gt;或&lt;code&gt;nSTATUS&lt;/code&gt;信号为低电平，那么器件的&lt;code&gt;IDCODE&lt;/code&gt;可能不会被正确的读取。为了正确地读取器件&lt;code&gt;IDCODE&lt;/code&gt;，必须只有在&lt;code&gt;nCONFIG&lt;/code&gt;和&lt;code&gt;nSTSTUS&lt;/code&gt;信号处于高电平时，发出&lt;code&gt;IDCODE&lt;/code&gt;JTAG指令&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h2&gt;6.关于软件开发中的问题&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;用SOPC-creat-header-files生成硬件地址信息&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span class="dquo"&gt;&amp;#8220;&lt;/span&gt;`#!/bin/sh
+sopc-create-header-files \
+&amp;#8220;./soc_system.sopcinfo&amp;#8221; \
+&amp;#8212;single hps_0.h \
+&amp;#8212;module&amp;nbsp;hps_0&lt;/p&gt;
+&lt;p&gt;&lt;span class="dquo"&gt;&amp;#8220;&lt;/span&gt;`&lt;/p&gt;
 &lt;h2&gt;附1&amp;nbsp;学习资源链接&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="https://blog.csdn.net/recclay/category_9848917.html"&gt;csdn网站上关于小梅哥SOC&amp;nbsp;FPGA的文档&lt;/a&gt;&lt;/li&gt;
