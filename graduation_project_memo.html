@@ -313,12 +313,13 @@
 <ul>
 <li>用SOPC-creat-header-files生成硬件地址信息</li>
 </ul>
-<p><span class="dquo">&#8220;</span>`#!/bin/sh
-sopc-create-header-files \
-&#8220;./soc_system.sopcinfo&#8221; \
-&#8212;single hps_0.h \
-&#8212;module&nbsp;hps_0</p>
-<p><span class="dquo">&#8220;</span>`</p>
+<div class="highlight"><pre><span></span><code>  #!/bin/sh
+  sopc-create-header-files \
+  &quot;./soc_system.sopcinfo&quot; \
+  --single hps_0.h \
+  --module hps_0
+</code></pre></div>
+
 <h2>附1&nbsp;学习资源链接</h2>
 <ol>
 <li><a href="https://blog.csdn.net/recclay/category_9848917.html">csdn网站上关于小梅哥SOC&nbsp;FPGA的文档</a></li>
