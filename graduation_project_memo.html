@@ -311,13 +311,14 @@
 </ul>
 <h2>6.关于软件开发中的问题</h2>
 <ul>
-<li>用SOPC-creat-header-files生成硬件地址信息</li>
+<li>用sopc-creat-header-files生成硬件地址信息</li>
 </ul>
-<div class="highlight"><pre><span></span><code>  #!/bin/sh
-  sopc-create-header-files \
-  &quot;./soc_system.sopcinfo&quot; \
-  --single hps_0.h \
-  --module hps_0
+<p>关于<code>generate_hps_qsys_header.sh</code>脚本</p>
+<div class="highlight"><pre><span></span><code>  #!/bin/sh                           // 
+  sopc-create-header-files \          // 调用sopc-creat-header-files工具
+  &quot;./soc_system.sopcinfo&quot; \           // 当前文件夹下的.sopcinfo文件
+  --single hps_0.h \                  // 要生成的文件名字
+  --module hps_0                      // 在qsys中添加hps模块时的名字，不是指工程中模块的名字
 </code></pre></div>
 
 <h2>附1&nbsp;学习资源链接</h2>
