@@ -13,6 +13,11 @@ url = "/pages/events.html"
 title = "Events"
 
 [[input.files]]
+path = "ebook store.html"
+url = "/ebook store.html"
+title = "电子藏书目录"
+
+[[input.files]]
 path = "commonly_used_tools_memo.html"
 url = "/commonly_used_tools_memo.html"
 title = "小工具操作备忘"
