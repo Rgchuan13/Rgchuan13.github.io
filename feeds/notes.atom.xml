@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Hi,Rg - notes</title><link href="/" rel="alternate"></link><link href="/feeds/notes.atom.xml" rel="self"></link><id>/</id><updated>2023-06-03T19:00:00+08:00</updated><entry><title>室内定位算法——KNN</title><link href="/indoor_positioning_algorithm.html" rel="alternate"></link><published>2023-05-06T19:00:00+08:00</published><updated>2023-06-03T19:00:00+08:00</updated><author><name>RongChuan</name></author><id>tag:None,2023-05-06:/indoor_positioning_algorithm.html</id><summary type="html">&lt;p&gt;indoor positioning algorithm &lt;span class="caps"&gt;KNN&lt;/span&gt;&lt;/p&gt;</summary><content type="html">&lt;h1&gt;室内定位算法——&lt;span class="caps"&gt;KNN&lt;/span&gt;&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;本文为室内定位算法学习中关于KNN算法的笔记&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;1.&amp;nbsp;目标定位算法之非测距的定位算法&lt;/h2&gt;
+&lt;h3&gt;1.1&amp;nbsp;质心定位算法&lt;/h3&gt;
+&lt;p&gt;举例：&lt;/p&gt;
+&lt;p&gt;多质点系统，每个质点的位置为$p(x_i,y_i,z_i)$考虑到每个质点的质量一样，那么质心的计算方法为：&lt;/p&gt;</content><category term="notes"></category><category term="indoor positioning"></category><category term="KNN"></category><category term="algorithm"></category></entry></feed>

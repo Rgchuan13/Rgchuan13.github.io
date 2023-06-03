@@ -13,8 +13,13 @@ url = "/pages/events.html"
 title = "Events"
 
 [[input.files]]
-path = "ebook store.html"
-url = "/ebook store.html"
+path = "indoor_positioning_algorithm.html"
+url = "/indoor_positioning_algorithm.html"
+title = "室内定位算法——KNN"
+
+[[input.files]]
+path = "ebook_store.html"
+url = "/ebook_store.html"
 title = "电子藏书目录"
 
 [[input.files]]

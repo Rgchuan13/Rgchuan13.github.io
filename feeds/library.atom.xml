@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Hi,Rg - library</title><link href="/" rel="alternate"></link><link href="/feeds/library.atom.xml" rel="self"></link><id>/</id><updated>2023-03-02T19:00:00+08:00</updated><entry><title>电子藏书目录</title><link href="/ebook%20store.html" rel="alternate"></link><published>2023-03-02T19:00:00+08:00</published><updated>2023-03-02T19:00:00+08:00</updated><author><name>RongChuan</name></author><id>tag:None,2023-03-02:/ebook store.html</id><summary type="html">&lt;p&gt;Personal ebook&amp;nbsp;store.&lt;/p&gt;</summary><content type="html">&lt;h1&gt;随手收集的电子书籍目录&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Hi,Rg - library</title><link href="/" rel="alternate"></link><link href="/feeds/library.atom.xml" rel="self"></link><id>/</id><updated>2023-03-02T19:00:00+08:00</updated><entry><title>电子藏书目录</title><link href="/ebook_store.html" rel="alternate"></link><published>2023-03-02T19:00:00+08:00</published><updated>2023-03-02T19:00:00+08:00</updated><author><name>RongChuan</name></author><id>tag:None,2023-03-02:/ebook_store.html</id><summary type="html">&lt;p&gt;Personal ebook&amp;nbsp;store.&lt;/p&gt;</summary><content type="html">&lt;h1&gt;随手收集的电子书籍目录&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;p&gt;由于以前收集的大量的书籍经常分散存储容易丢失，因此将以后收集的书籍随手进行整理归纳，以备查阅。&lt;/p&gt;
 &lt;/blockquote&gt;

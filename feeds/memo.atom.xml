@@ -54,6 +54,11 @@
 &lt;/li&gt;
 &lt;li&gt;&lt;a href="#5关于硬件设计中的注意事项"&gt;5.关于硬件设计中的注意事项&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#6关于软件开发中的问题"&gt;6.关于软件开发中的问题&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#7关于外围部分模块的使用记录"&gt;7.关于外围部分模块的使用记录&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#71-esp8266-esp-01"&gt;7.1 esp8266 &lt;span class="caps"&gt;ESP&lt;/span&gt;-01&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#7关于rf部分的问题"&gt;7.关于RF部分的问题&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#附1-学习资源链接"&gt;附1&amp;nbsp;学习资源链接&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1&gt;毕业设计记录&lt;/h1&gt;
@@ -239,6 +244,21 @@
   --module hps_0                      // 在qsys中添加hps模块时的名字，不是指工程中模块的名字
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+&lt;h2&gt;7.关于外围部分模块的使用记录&lt;/h2&gt;
+&lt;h3&gt;7.1 esp8266 &lt;span class="caps"&gt;ESP&lt;/span&gt;-01&lt;/h3&gt;
+&lt;p&gt;引脚定义
+&lt;img alt="ESP01引脚定义" src="/images/memo/esp01_pindefine.png"&gt;&lt;/p&gt;
+&lt;p&gt;工作状态
+| CH_PD | 状态   |
+| &amp;#8212;&amp;#8212;- | &amp;#8212;&amp;#8212;&amp;#8212; |
+| &lt;span class="caps"&gt;HIGH&lt;/span&gt;  | 工作   |
+| &lt;span class="caps"&gt;LOW&lt;/span&gt;   | 不工作&amp;nbsp;|&lt;/p&gt;
+&lt;p&gt;程序烧写
+| &lt;span class="caps"&gt;GPIO0&lt;/span&gt; | &lt;span class="caps"&gt;GPIO2&lt;/span&gt;  | 状态           |
+| &amp;#8212;&amp;#8212;- | &amp;#8212;&amp;#8212;&amp;#8212; | &amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212; |
+| &lt;span class="caps"&gt;HIGH&lt;/span&gt;  | 工作   | &lt;span class="caps"&gt;SPI&lt;/span&gt; &lt;span class="caps"&gt;FLASH&lt;/span&gt; 启动 |
+| &lt;span class="caps"&gt;LOW&lt;/span&gt;   | 不工作 | UART烧写模式&amp;nbsp;|&lt;/p&gt;
+&lt;h2&gt;7.关于RF部分的问题&lt;/h2&gt;
 &lt;h2&gt;附1&amp;nbsp;学习资源链接&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="https://blog.csdn.net/recclay/category_9848917.html"&gt;csdn网站上关于小梅哥SOC&amp;nbsp;FPGA的文档&lt;/a&gt;&lt;/li&gt;

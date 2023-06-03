@@ -136,6 +136,11 @@
 </li>
 <li><a href="#5关于硬件设计中的注意事项">5.关于硬件设计中的注意事项</a></li>
 <li><a href="#6关于软件开发中的问题">6.关于软件开发中的问题</a></li>
+<li><a href="#7关于外围部分模块的使用记录">7.关于外围部分模块的使用记录</a><ul>
+<li><a href="#71-esp8266-esp-01">7.1 esp8266 <span class="caps">ESP</span>-01</a></li>
+</ul>
+</li>
+<li><a href="#7关于rf部分的问题">7.关于RF部分的问题</a></li>
 <li><a href="#附1-学习资源链接">附1&nbsp;学习资源链接</a></li>
 </ul>
 <h1>毕业设计记录</h1>
@@ -321,6 +326,21 @@
   --module hps_0                      // 在qsys中添加hps模块时的名字，不是指工程中模块的名字
 </code></pre></div>
 
+<h2>7.关于外围部分模块的使用记录</h2>
+<h3>7.1 esp8266 <span class="caps">ESP</span>-01</h3>
+<p>引脚定义
+<img alt="ESP01引脚定义" src="/images/memo/esp01_pindefine.png"></p>
+<p>工作状态
+| CH_PD | 状态   |
+| &#8212;&#8212;- | &#8212;&#8212;&#8212; |
+| <span class="caps">HIGH</span>  | 工作   |
+| <span class="caps">LOW</span>   | 不工作&nbsp;|</p>
+<p>程序烧写
+| <span class="caps">GPIO0</span> | <span class="caps">GPIO2</span>  | 状态           |
+| &#8212;&#8212;- | &#8212;&#8212;&#8212; | &#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212; |
+| <span class="caps">HIGH</span>  | 工作   | <span class="caps">SPI</span> <span class="caps">FLASH</span> 启动 |
+| <span class="caps">LOW</span>   | 不工作 | UART烧写模式&nbsp;|</p>
+<h2>7.关于RF部分的问题</h2>
 <h2>附1&nbsp;学习资源链接</h2>
 <ol>
 <li><a href="https://blog.csdn.net/recclay/category_9848917.html">csdn网站上关于小梅哥SOC&nbsp;FPGA的文档</a></li>

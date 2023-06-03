@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Hi,Rg</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2023-03-02T19:00:00+08:00</updated><entry><title>电子藏书目录</title><link href="/ebook%20store.html" rel="alternate"></link><published>2023-03-02T19:00:00+08:00</published><updated>2023-03-02T19:00:00+08:00</updated><author><name>RongChuan</name></author><id>tag:None,2023-03-02:/ebook store.html</id><summary type="html">&lt;p&gt;Personal ebook&amp;nbsp;store.&lt;/p&gt;</summary><content type="html">&lt;h1&gt;随手收集的电子书籍目录&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Hi,Rg</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2023-06-03T19:00:00+08:00</updated><entry><title>室内定位算法——KNN</title><link href="/indoor_positioning_algorithm.html" rel="alternate"></link><published>2023-05-06T19:00:00+08:00</published><updated>2023-06-03T19:00:00+08:00</updated><author><name>RongChuan</name></author><id>tag:None,2023-05-06:/indoor_positioning_algorithm.html</id><summary type="html">&lt;p&gt;indoor positioning algorithm &lt;span class="caps"&gt;KNN&lt;/span&gt;&lt;/p&gt;</summary><content type="html">&lt;h1&gt;室内定位算法——&lt;span class="caps"&gt;KNN&lt;/span&gt;&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;本文为室内定位算法学习中关于KNN算法的笔记&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;1.&amp;nbsp;目标定位算法之非测距的定位算法&lt;/h2&gt;
+&lt;h3&gt;1.1&amp;nbsp;质心定位算法&lt;/h3&gt;
+&lt;p&gt;举例：&lt;/p&gt;
+&lt;p&gt;多质点系统，每个质点的位置为$p(x_i,y_i,z_i)$考虑到每个质点的质量一样，那么质心的计算方法为：&lt;/p&gt;</content><category term="notes"></category><category term="indoor positioning"></category><category term="KNN"></category><category term="algorithm"></category></entry><entry><title>电子藏书目录</title><link href="/ebook_store.html" rel="alternate"></link><published>2023-03-02T19:00:00+08:00</published><updated>2023-03-02T19:00:00+08:00</updated><author><name>RongChuan</name></author><id>tag:None,2023-03-02:/ebook_store.html</id><summary type="html">&lt;p&gt;Personal ebook&amp;nbsp;store.&lt;/p&gt;</summary><content type="html">&lt;h1&gt;随手收集的电子书籍目录&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;p&gt;由于以前收集的大量的书籍经常分散存储容易丢失，因此将以后收集的书籍随手进行整理归纳，以备查阅。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -64,6 +71,11 @@
 &lt;/li&gt;
 &lt;li&gt;&lt;a href="#5关于硬件设计中的注意事项"&gt;5.关于硬件设计中的注意事项&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#6关于软件开发中的问题"&gt;6.关于软件开发中的问题&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#7关于外围部分模块的使用记录"&gt;7.关于外围部分模块的使用记录&lt;/a&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="#71-esp8266-esp-01"&gt;7.1 esp8266 &lt;span class="caps"&gt;ESP&lt;/span&gt;-01&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#7关于rf部分的问题"&gt;7.关于RF部分的问题&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="#附1-学习资源链接"&gt;附1&amp;nbsp;学习资源链接&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1&gt;毕业设计记录&lt;/h1&gt;
@@ -249,6 +261,21 @@
   --module hps_0                      // 在qsys中添加hps模块时的名字，不是指工程中模块的名字
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+&lt;h2&gt;7.关于外围部分模块的使用记录&lt;/h2&gt;
+&lt;h3&gt;7.1 esp8266 &lt;span class="caps"&gt;ESP&lt;/span&gt;-01&lt;/h3&gt;
+&lt;p&gt;引脚定义
+&lt;img alt="ESP01引脚定义" src="/images/memo/esp01_pindefine.png"&gt;&lt;/p&gt;
+&lt;p&gt;工作状态
+| CH_PD | 状态   |
+| &amp;#8212;&amp;#8212;- | &amp;#8212;&amp;#8212;&amp;#8212; |
+| &lt;span class="caps"&gt;HIGH&lt;/span&gt;  | 工作   |
+| &lt;span class="caps"&gt;LOW&lt;/span&gt;   | 不工作&amp;nbsp;|&lt;/p&gt;
+&lt;p&gt;程序烧写
+| &lt;span class="caps"&gt;GPIO0&lt;/span&gt; | &lt;span class="caps"&gt;GPIO2&lt;/span&gt;  | 状态           |
+| &amp;#8212;&amp;#8212;- | &amp;#8212;&amp;#8212;&amp;#8212; | &amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212;&amp;#8212; |
+| &lt;span class="caps"&gt;HIGH&lt;/span&gt;  | 工作   | &lt;span class="caps"&gt;SPI&lt;/span&gt; &lt;span class="caps"&gt;FLASH&lt;/span&gt; 启动 |
+| &lt;span class="caps"&gt;LOW&lt;/span&gt;   | 不工作 | UART烧写模式&amp;nbsp;|&lt;/p&gt;
+&lt;h2&gt;7.关于RF部分的问题&lt;/h2&gt;
 &lt;h2&gt;附1&amp;nbsp;学习资源链接&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href="https://blog.csdn.net/recclay/category_9848917.html"&gt;csdn网站上关于小梅哥SOC&amp;nbsp;FPGA的文档&lt;/a&gt;&lt;/li&gt;
