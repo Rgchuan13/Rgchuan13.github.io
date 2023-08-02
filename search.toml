@@ -13,6 +13,16 @@ url = "/pages/events.html"
 title = "Events"
 
 [[input.files]]
+path = "virtuoso_learn.html"
+url = "/virtuoso_learn.html"
+title = "virtuoso学习笔记"
+
+[[input.files]]
+path = "nfc_method.html"
+url = "/nfc_method.html"
+title = "NFC 基础"
+
+[[input.files]]
 path = "indoor_positioning_algorithm.html"
 url = "/indoor_positioning_algorithm.html"
 title = "室内定位算法——KNN"

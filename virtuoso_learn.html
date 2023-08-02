@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content="Pelican" />
-    <title>室内定位算法——KNN</title>
+    <title>virtuoso学习笔记</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab|Ruda" />
     <link rel="stylesheet" type="text/css" href="/theme/css/main.css" />
@@ -16,7 +16,7 @@
     <link
         href="/feeds/all.atom.xml"
         type="application/atom+xml" rel="alternate" title="Hi,Rg Atom Feed" />
-<meta name="description" content="indoor positioning algorithm KNN" />
+<meta name="description" content="virtuoso learn" />
     <script>
         if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia(
                 '(prefers-color-scheme: dark)').matches)) {
@@ -94,10 +94,10 @@
 
 <main>
   <header>
-    <h1 class="font-semibold text-3xl my-2">室内定位算法——<span class="caps">KNN</span></h1>
+    <h1 class="font-semibold text-3xl my-2">virtuoso学习笔记</h1>
     <footer class="flex text-sm text-zinc-800 dark:text-zinc-400">
       <div class="flex text-xs text-zinc-800 dark:text-zinc-400">
-        <time>五月 06, 2023</time>
+        <time>七月 20, 2023</time>
         <div>
         </div>
         <div>
@@ -106,7 +106,7 @@
       </div>
     </footer>
     <div class="flex text-xs text-zinc-800 dark:text-zinc-400">
-      <span>Last updated: 六月 03, 2023</span>
+      <span>Last updated: 八月 02, 2023</span>
     </div>
   </header>
   <div class="max-w-7xl container mx-auto my-8 text-zinc-800 dark:text-zinc-300  
@@ -125,123 +125,86 @@
               prose-code:font-light
               prose-img:rounded-md
               ">
-    <h1>室内定位算法——<span class="caps">KNN</span></h1>
-<blockquote>
-<p>本文为室内定位算法学习中关于KNN算法的笔记</p>
-</blockquote>
-<h2>1.&nbsp;目标定位算法之非测距的定位算法</h2>
-<h3>1.1&nbsp;质心定位算法</h3>
-<p>举例：</p>
-<p>多质点系统，每个质点的位置为<span class="math">\(p(x_i,y_i,z_i)\)</span>考虑到每个质点的质量一样，那么质心的计算方法为：</p>
-<div class="math">$$
-\begin{cases}
-    x_c=\frac{1}{N}\sum_{i=1}^N{x_i}\\
-    y_c=\frac{1}{N}\sum_{i=1}^N{y_i}\\
-    z_c=\frac{1}{N}\sum_{i=1}^N{z_i}\\
-\end{cases}
-$$</div>
-<p>将参考点的位置看为质点的位置，参照上式即可计算目标点的位置，则容易理解当参考点的分布位置稀疏，定位误差明显较大。</p>
-<h3>1.2&nbsp;加权质心定位算法</h3>
-<p>在目标定位中，定位系统可以根据探测到的目标信号的强度，例如无线接收信号强度，粗略的计算目标的远近，并将这个强度作为一个权值，用在质心定位算法中。</p>
-<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
-    var align = "center",
-        indent = "0em",
-        linebreak = "false";
+    <h1>virtuoso&nbsp;学习笔记</h1>
+<h2>随记</h2>
+<p>设置.cdsenv or .cdsinit 文件以设置环境变量用于Layout <span class="caps">XL</span>&nbsp;启动时</p>
+<div class="highlight"><pre><span></span><code><span class="n">Setting</span><span class="w"> </span><span class="n">Environment</span><span class="w"> </span><span class="n">Variables</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">.</span><span class="n">cdsenv</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="o">.</span><span class="n">cdsinit</span><span class="w"> </span><span class="n">File</span><span class="w"></span>
+<span class="n">To</span><span class="w"> </span><span class="n">have</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">environment</span><span class="w"> </span><span class="n">variables</span><span class="w"> </span><span class="n">set</span><span class="w"> </span><span class="n">automatically</span><span class="w"> </span><span class="n">when</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">start</span><span class="w"> </span><span class="n">Layout</span><span class="w"> </span><span class="n">XL</span><span class="p">,</span><span class="w"> </span><span class="n">do</span><span class="w"> </span><span class="n">one</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span>
+<span class="n">following</span><span class="o">.</span><span class="w"></span>
+<span class="o">*</span><span class="w"> </span><span class="n">Include</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">environment</span><span class="w"> </span><span class="n">variables</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="o">.</span><span class="n">cdsenv</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">home</span><span class="w"> </span><span class="n">directory</span><span class="p">;</span><span class="w"> </span><span class="k">for</span><span class="w"> </span>
+<span class="n">example</span><span class="p">,</span><span class="w"></span>
+<span class="n">layoutXL</span><span class="w"> </span><span class="n">chainFolds</span><span class="w"> </span><span class="n">boolean</span><span class="w"> </span><span class="n">t</span><span class="w"></span>
+<span class="o">*</span><span class="w"> </span><span class="n">Include</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">envSetVal</span><span class="p">(</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">command</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="o">.</span><span class="n">cdsinit</span><span class="w"> </span><span class="n">file</span><span class="w"></span>
+<span class="n">envSetVal</span><span class="p">(</span><span class="s2">&quot;layoutXL&quot;</span><span class="w"> </span><span class="s2">&quot;chainFolds&quot;</span><span class="w"> </span><span class="s1">&#39;boolean t)</span>
+<span class="n">For</span><span class="w"> </span><span class="n">more</span><span class="w"> </span><span class="n">information</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="o">.</span><span class="n">cdsenv</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="o">.</span><span class="n">cdsinit</span><span class="w"> </span><span class="n">files</span><span class="p">,</span><span class="w"> </span><span class="n">see</span><span class="w"> </span><span class="n">Environment</span><span class="w"> </span><span class="n">Variables</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span>
+<span class="n">Virtuoso</span><span class="w"> </span><span class="n">Layout</span><span class="w"> </span><span class="n">Suite</span><span class="w"> </span><span class="n">L</span><span class="w"> </span><span class="n">User</span><span class="w"> </span><span class="n">Guide</span><span class="o">.</span><span class="w"></span>
+</code></pre></div>
 
-    if (false) {
-        align = (screen.width < 768) ? "left" : align;
-        indent = (screen.width < 768) ? "0em" : indent;
-        linebreak = (screen.width < 768) ? 'true' : linebreak;
-    }
+<p><span class="caps">CIW</span> 运行 <code>envSetVal()</code>命令用于设置current session&nbsp;的环境变量</p>
+<div class="highlight"><pre><span></span><code><span class="n">envSetVal</span><span class="p">(</span><span class="s2">&quot;layoutXL&quot;</span><span class="w"> </span><span class="s2">&quot;chainFolds&quot;</span><span class="w"> </span><span class="s1">&#39;boolean t); eg:to set the Layout XL chainFolds variable</span>
 
-    var mathjaxscript = document.createElement('script');
-    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
-    mathjaxscript.type = 'text/javascript';
-    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+<span class="n">envGetVal</span><span class="p">(</span><span class="s2">&quot;layoutXL&quot;</span><span class="w"> </span><span class="s2">&quot;chainFolds&quot;</span><span class="p">);</span><span class="w"> </span><span class="n">To</span><span class="w"> </span><span class="n">determine</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">current</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">any</span><span class="w"> </span><span class="n">Layout</span><span class="w"> </span><span class="n">XL</span><span class="w"> </span><span class="n">environment</span><span class="w"> </span><span class="n">variable</span><span class="p">,</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">following</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span>
+<span class="n">the</span><span class="w"> </span><span class="n">CIW</span><span class="o">.</span><span class="w"></span>
+</code></pre></div>
 
-    var configscript = document.createElement('script');
-    configscript.type = 'text/x-mathjax-config';
-    configscript[(window.opera ? "innerHTML" : "text")] =
-        "MathJax.Hub.Config({" +
-        "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
-        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
-        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
-        "    displayAlign: '"+ align +"'," +
-        "    displayIndent: '"+ indent +"'," +
-        "    showMathMenu: true," +
-        "    messageStyle: 'normal'," +
-        "    tex2jax: { " +
-        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
-        "        displayMath: [ ['$$','$$'] ]," +
-        "        processEscapes: true," +
-        "        preview: 'TeX'," +
-        "    }, " +
-        "    'HTML-CSS': { " +
-        "        availableFonts: ['STIX', 'TeX']," +
-        "        preferredFont: 'STIX'," +
-        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
-        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
-        "    }, " +
-        "}); " +
-        "if ('default' !== 'default') {" +
-            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
-                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
-                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
-                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
-                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
-                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
-            "});" +
-        "}";
-
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
-}
-</script>
+<p><img alt="Display setting" src="/content/images/notes/vo/setting%20Display%20Colors.png"></p>
+<ul>
+<li>Preselect Mode / Editing commands do not automatically repeat, even if the Repeat Commands option 
+is switched on in the Layout Editor Options&nbsp;form.</li>
+<li>Postselect&nbsp;Mode </li>
+<li>one pair of schematic-layout&nbsp;windows</li>
+</ul>
+<p><img alt="prtCIW" src="../images/notes/vo/prtCIW.png"></p>
+<ul>
+<li>
+<p>Layout Editor Rules The <code>leRules</code> section of the technology file specifies the layers that are listed in the Layer 
+Selection Window (<span class="caps">LSW</span>) assistant and the order in which they are listed. For more 
+information, see Virtuoso Technology Data <span class="caps">ASCII</span> Files&nbsp;Reference.</p>
+</li>
+<li>
+<p>Layer Definitions The <code>layerDefinitions</code> section of the technology file defines the layers used in the current 
+technology. All the layers used in your design must be defined in this section. For more 
+information, see “Technology File Layer Definitions” in the Virtuoso Technology Data 
+<span class="caps">ASCII</span> Files Reference.
+<img alt="techDataRequire" src="../images/notes/vo/techDataRequire.png">
+<img alt="layerrules" src="../images/notes/vo/layerrules.png">
+<img alt="sirce" src="../images/notes/vo/sirce.png">
+<img alt="devices" src="../images/notes/vo/devices.png">
+<img alt="phyrules" src="../images/about/me.jpg"></p>
+</li>
+<li>
+<p>Each physical layer must be defined in the layerRules section of the technology file, 
+whereas each derived layer must be defined in the techDerivedLayers&nbsp;section.</p>
+</li>
+<li>
+<p>a layer-purpose pair
+<img alt="lpa" src="../images/notes/vo/lpa.png"></p>
+</li>
+</ul>
     <!-- <div class="aspect-w-16 aspect-h-9 mx-auto"></div> CSS placeholder -->
   </div>
   <footer class="flex flex-col mt-10 ">
     <ul class="flex flex-wrap">
-      <a href="/tag/algorithm.html">
+      <a href="/tag/candence.html">
         <li
           class="bg-zinc-200 hover:bg-zinc-300 dark:hover:bg-zinc-800 dark:bg-zinc-700 text-zinc-500 dark:text-neutral-400 mb-2 mr-2 px-3 py-1.5 rounded-md transition ease-in active:-translate-y-1 active:scale-110 duration-75">
-          algorithm
+          candence
         </li>
       </a>
-      <a href="/tag/indoor-positioning.html">
+      <a href="/tag/virtuoso.html">
         <li
           class="bg-zinc-200 hover:bg-zinc-300 dark:hover:bg-zinc-800 dark:bg-zinc-700 text-zinc-500 dark:text-neutral-400 mb-2 mr-2 px-3 py-1.5 rounded-md transition ease-in active:-translate-y-1 active:scale-110 duration-75">
-          indoor positioning
-        </li>
-      </a>
-      <a href="/tag/knn.html">
-        <li
-          class="bg-zinc-200 hover:bg-zinc-300 dark:hover:bg-zinc-800 dark:bg-zinc-700 text-zinc-500 dark:text-neutral-400 mb-2 mr-2 px-3 py-1.5 rounded-md transition ease-in active:-translate-y-1 active:scale-110 duration-75">
-          KNN
+          virtuoso
         </li>
       </a>
     </ul>
     <div class="flex w-full my-2 bg-zinc-200 dark:bg-zinc-700 rounded-lg">
-      <div class="w-1/2 hover:bg-zinc-300 dark:hover:bg-zinc-800 rounded-l-lg">
-        <a class="flex flex-col pr-2" href="/nfc_method.html">
-          <div class="mx-4 py-2 text-left">
-            <p class="text-zinc-500 dark:text-neutral-400 text-sm">« PREV PAGE</p>
-            <p class="text-left py-1 hover:underline"><span class="caps">NFC</span>&nbsp;基础</p>
-          </div>
-        </a>
-      </div>
+      <div class="w-1/2 rounded-l-lg"></div>
       <div class="w-1/2 hover:bg-zinc-300 dark:hover:bg-zinc-800 rounded-r-lg ">
-        <a class="flex flex-col" href="/ebook_store.html">
+        <a class="flex flex-col" href="/nfc_method.html">
           <div class="text-right mx-4 py-2">
             <p class="text-zinc-500 dark:text-neutral-400 text-sm">NEXT PAGE »</p>
-            <p class="text-right py-1 hover:underline">电子藏书目录</p>
+            <p class="text-right py-1 hover:underline"><span class="caps">NFC</span>&nbsp;基础</p>
           </div>
         </a>
       </div>
@@ -249,7 +212,7 @@ $$</div>
     <div class="flex bg-zinc-200 dark:bg-zinc-700 py-2 rounded-lg justify-center space-x-2 text-xs">
       <ul>
         <a target="_blank" rel="noopener noreferrer" title="linkedin" aria-label="share Features on linkedin"
-          href="https://www.linkedin.com/sharing/share-offsite/?url=/indoor_positioning_algorithm.html">
+          href="https://www.linkedin.com/sharing/share-offsite/?url=/virtuoso_learn.html">
           <li class="bg-gray-900 p-1 text-white rounded-md">
             <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
           </li>

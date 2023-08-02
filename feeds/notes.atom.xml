@@ -1,5 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Hi,Rg - notes</title><link href="/" rel="alternate"></link><link href="/feeds/notes.atom.xml" rel="self"></link><id>/</id><updated>2023-06-03T19:00:00+08:00</updated><entry><title>室内定位算法——KNN</title><link href="/indoor_positioning_algorithm.html" rel="alternate"></link><published>2023-05-06T19:00:00+08:00</published><updated>2023-06-03T19:00:00+08:00</updated><author><name>RongChuan</name></author><id>tag:None,2023-05-06:/indoor_positioning_algorithm.html</id><summary type="html">&lt;p&gt;indoor positioning algorithm &lt;span class="caps"&gt;KNN&lt;/span&gt;&lt;/p&gt;</summary><content type="html">&lt;h1&gt;室内定位算法——&lt;span class="caps"&gt;KNN&lt;/span&gt;&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Hi,Rg - notes</title><link href="/" rel="alternate"></link><link href="/feeds/notes.atom.xml" rel="self"></link><id>/</id><updated>2023-08-02T19:00:00+08:00</updated><entry><title>virtuoso学习笔记</title><link href="/virtuoso_learn.html" rel="alternate"></link><published>2023-07-20T19:00:00+08:00</published><updated>2023-08-02T19:00:00+08:00</updated><author><name>RongChuan</name></author><id>tag:None,2023-07-20:/virtuoso_learn.html</id><summary type="html">&lt;p&gt;virtuoso&amp;nbsp;learn&lt;/p&gt;</summary><content type="html">&lt;h1&gt;virtuoso&amp;nbsp;学习笔记&lt;/h1&gt;
+&lt;h2&gt;随记&lt;/h2&gt;
+&lt;p&gt;设置.cdsenv or .cdsinit 文件以设置环境变量用于Layout &lt;span class="caps"&gt;XL&lt;/span&gt;&amp;nbsp;启动时&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;Setting&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Environment&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Variables&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;in&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cdsenv&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;or&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cdsinit&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;File&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;To&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;have&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;your&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;environment&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;variables&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;set&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;automatically&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;when&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;you&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;start&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Layout&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;XL&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;do&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;one&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;of&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;
+&lt;span class="n"&gt;following&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Include&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;environment&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;variables&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;in&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cdsenv&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;file&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;in&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;your&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;home&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;directory&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;
+&lt;span class="n"&gt;example&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;layoutXL&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;chainFolds&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;boolean&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Include&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;an&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;envSetVal&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;command&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;in&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;your&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cdsinit&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;file&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;span class="n"&gt;envSetVal&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;layoutXL&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;chainFolds&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;boolean t)&lt;/span&gt;
+&lt;span class="n"&gt;For&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;more&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;information&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;on&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cdsenv&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;and&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cdsinit&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;files&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;see&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Environment&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Variables&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;in&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;
+&lt;span class="n"&gt;Virtuoso&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Layout&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Suite&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;L&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;User&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Guide&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;span class="caps"&gt;CIW&lt;/span&gt; 运行 &lt;code&gt;envSetVal()&lt;/code&gt;命令用于设置current session&amp;nbsp;的环境变量&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;envSetVal&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;layoutXL&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;chainFolds&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;boolean t); eg:to set the Layout XL chainFolds variable&lt;/span&gt;
+
+&lt;span class="n"&gt;envGetVal&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;layoutXL&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;chainFolds&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;To&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;determine&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;current&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;of&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;any&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Layout&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;XL&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;environment&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;variable&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;type&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;following&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;in&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;
+&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;CIW&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img alt="Display setting" src="/content/images/notes/vo/setting%20Display%20Colors.png"&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Preselect Mode / Editing commands do not automatically repeat, even if the Repeat Commands option 
+is switched on in the Layout Editor Options&amp;nbsp;form.&lt;/li&gt;
+&lt;li&gt;Postselect&amp;nbsp;Mode &lt;/li&gt;
+&lt;li&gt;one pair of schematic-layout&amp;nbsp;windows&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="prtCIW" src="../images/notes/vo/prtCIW.png"&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Layout Editor Rules The &lt;code&gt;leRules&lt;/code&gt; section of the technology file specifies the layers that are listed in the Layer 
+Selection Window (&lt;span class="caps"&gt;LSW&lt;/span&gt;) assistant and the order in which they are listed. For more 
+information, see Virtuoso Technology Data &lt;span class="caps"&gt;ASCII&lt;/span&gt; Files&amp;nbsp;Reference.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Layer Definitions The &lt;code&gt;layerDefinitions&lt;/code&gt; section of the technology file defines the layers used in the current 
+technology. All the layers used in your design must be defined in this section. For more 
+information, see “Technology File Layer Definitions” in the Virtuoso Technology Data 
+&lt;span class="caps"&gt;ASCII&lt;/span&gt; Files Reference.
+&lt;img alt="techDataRequire" src="../images/notes/vo/techDataRequire.png"&gt;
+&lt;img alt="layerrules" src="../images/notes/vo/layerrules.png"&gt;
+&lt;img alt="sirce" src="../images/notes/vo/sirce.png"&gt;
+&lt;img alt="devices" src="../images/notes/vo/devices.png"&gt;
+&lt;img alt="phyrules" src="../images/about/me.jpg"&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Each physical layer must be defined in the layerRules section of the technology file, 
+whereas each derived layer must be defined in the techDerivedLayers&amp;nbsp;section.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;a layer-purpose pair
+&lt;img alt="lpa" src="../images/notes/vo/lpa.png"&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</content><category term="notes"></category><category term="virtuoso"></category><category term="candence"></category></entry><entry><title>NFC 基础</title><link href="/nfc_method.html" rel="alternate"></link><published>2023-06-08T19:00:00+08:00</published><updated>2023-06-08T19:00:00+08:00</updated><author><name>RongChuan</name></author><id>tag:None,2023-06-08:/nfc_method.html</id><summary type="html">&lt;p&gt;Basic knowledge of&amp;nbsp;nfc&lt;/p&gt;</summary><content type="html">&lt;h1&gt;&lt;span class="caps"&gt;NFC&lt;/span&gt;&amp;nbsp;基础&lt;/h1&gt;
+&lt;h2&gt;&lt;span class="caps"&gt;NFC&lt;/span&gt;&amp;nbsp;通信基础&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;发起方&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;目标方&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;主动通信&amp;nbsp;数据传输过程中由发送数据方产生射频场&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;被动通信&amp;nbsp;整个通信过程中由发起方提供射频场&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;负载调制&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在NFC被动通信中，通信的发起方产生射频场，而目标方通过负载调制将数据发送给发起方。
+近距离通信系统的射频接口实际上是一个电感耦合系统，即一种变压器耦合系统。作为初级线圈的发起方和作为次级线圈的目标方之间的耦合，只要线圈距离不大于0.16倍波长，该变压器耦合模型就是有效的。NFC的工作频率为13.56MHz，波长为22m，因此只要NFC通信的发起方和目标方之间的距离不大于3.52m，就遵循变压器耦合模型的定义。&amp;nbsp;如果目标方固有的谐振频率与发起方的发送频率相符合，那么把目标方放入发起方天线的交变磁场，目标方就能从磁场中获取能量。目标方天线的电阻成为发起方天线回路的负载。当负载电阻发生变化时，发起方天线的电流在内阻上的电压将变化。目标方通过待发送的数据控制负载电阻的接通和断开，可以实现目标方对发起方天线电压的振幅调制，数据就在NFC发起方和目标方之间传输。这种传输方式称为负载调制。&lt;/p&gt;</content><category term="notes"></category><category term="NFC"></category><category term="Basic Knowledge"></category></entry><entry><title>室内定位算法——KNN</title><link href="/indoor_positioning_algorithm.html" rel="alternate"></link><published>2023-05-06T19:00:00+08:00</published><updated>2023-06-03T19:00:00+08:00</updated><author><name>RongChuan</name></author><id>tag:None,2023-05-06:/indoor_positioning_algorithm.html</id><summary type="html">&lt;p&gt;indoor positioning algorithm &lt;span class="caps"&gt;KNN&lt;/span&gt;&lt;/p&gt;</summary><content type="html">&lt;h1&gt;室内定位算法——&lt;span class="caps"&gt;KNN&lt;/span&gt;&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;p&gt;本文为室内定位算法学习中关于KNN算法的笔记&lt;/p&gt;
 &lt;/blockquote&gt;
