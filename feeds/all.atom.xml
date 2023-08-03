@@ -21,7 +21,7 @@
 &lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;CIW&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;img alt="Display setting" src="/content/images/notes/vo/setting%20Display%20Colors.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Display setting" src="../images/notes/vo/settingDisplayColors.png"&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Preselect Mode / Editing commands do not automatically repeat, even if the Repeat Commands option 
 is switched on in the Layout Editor Options&amp;nbsp;form.&lt;/li&gt;
@@ -44,7 +44,7 @@ information, see “Technology File Layer Definitions” in the Virtuoso Technol
 &lt;img alt="layerrules" src="../images/notes/vo/layerrules.png"&gt;
 &lt;img alt="sirce" src="../images/notes/vo/sirce.png"&gt;
 &lt;img alt="devices" src="../images/notes/vo/devices.png"&gt;
-&lt;img alt="phyrules" src="../images/about/me.jpg"&gt;&lt;/p&gt;
+&lt;img alt="phyrules" src="../images/notes/vo/phyrules.png"&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Each physical layer must be defined in the layerRules section of the technology file, 
@@ -52,7 +52,7 @@ whereas each derived layer must be defined in the techDerivedLayers&amp;nbsp;sec
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;a layer-purpose pair
-&lt;img alt="lpa" src="../images/notes/vo/lpa.png"&gt;&lt;/p&gt;
+&lt;img alt="lpa" src=""&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;</content><category term="notes"></category><category term="virtuoso"></category><category term="candence"></category></entry><entry><title>NFC 基础</title><link href="/nfc_method.html" rel="alternate"></link><published>2023-06-08T19:00:00+08:00</published><updated>2023-06-08T19:00:00+08:00</updated><author><name>RongChuan</name></author><id>tag:None,2023-06-08:/nfc_method.html</id><summary type="html">&lt;p&gt;Basic knowledge of&amp;nbsp;nfc&lt;/p&gt;</summary><content type="html">&lt;h1&gt;&lt;span class="caps"&gt;NFC&lt;/span&gt;&amp;nbsp;基础&lt;/h1&gt;
 &lt;h2&gt;&lt;span class="caps"&gt;NFC&lt;/span&gt;&amp;nbsp;通信基础&lt;/h2&gt;
