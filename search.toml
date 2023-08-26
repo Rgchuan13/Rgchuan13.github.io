@@ -28,11 +28,6 @@ url = "/nfc_method.html"
 title = "NFC 基础"
 
 [[input.files]]
-path = "indoor_positioning_algorithm.html"
-url = "/indoor_positioning_algorithm.html"
-title = "室内定位算法——KNN"
-
-[[input.files]]
 path = "ebook_store.html"
 url = "/ebook_store.html"
 title = "电子藏书目录"
@@ -41,8 +36,3 @@ title = "电子藏书目录"
 path = "commonly_used_tools_memo.html"
 url = "/commonly_used_tools_memo.html"
 title = "小工具操作备忘"
-
-[[input.files]]
-path = "graduation_project_memo.html"
-url = "/graduation_project_memo.html"
-title = "基于 CycloneV 的 SoC 数字系统设计（毕设备忘）"
