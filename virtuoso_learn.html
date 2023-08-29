@@ -126,61 +126,108 @@
               prose-img:rounded-md
               ">
     <h1>virtuoso&nbsp;学习笔记</h1>
-<h2>随记</h2>
-<p>设置.cdsenv or .cdsinit 文件以设置环境变量用于Layout <span class="caps">XL</span>&nbsp;启动时</p>
-<div class="highlight"><pre><span></span><code><span class="n">Setting</span><span class="w"> </span><span class="n">Environment</span><span class="w"> </span><span class="n">Variables</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">.</span><span class="n">cdsenv</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="o">.</span><span class="n">cdsinit</span><span class="w"> </span><span class="n">File</span><span class="w"></span>
-<span class="n">To</span><span class="w"> </span><span class="n">have</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">environment</span><span class="w"> </span><span class="n">variables</span><span class="w"> </span><span class="n">set</span><span class="w"> </span><span class="n">automatically</span><span class="w"> </span><span class="n">when</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">start</span><span class="w"> </span><span class="n">Layout</span><span class="w"> </span><span class="n">XL</span><span class="p">,</span><span class="w"> </span><span class="n">do</span><span class="w"> </span><span class="n">one</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span>
-<span class="n">following</span><span class="o">.</span><span class="w"></span>
-<span class="o">*</span><span class="w"> </span><span class="n">Include</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">environment</span><span class="w"> </span><span class="n">variables</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="o">.</span><span class="n">cdsenv</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">home</span><span class="w"> </span><span class="n">directory</span><span class="p">;</span><span class="w"> </span><span class="k">for</span><span class="w"> </span>
-<span class="n">example</span><span class="p">,</span><span class="w"></span>
-<span class="n">layoutXL</span><span class="w"> </span><span class="n">chainFolds</span><span class="w"> </span><span class="n">boolean</span><span class="w"> </span><span class="n">t</span><span class="w"></span>
-<span class="o">*</span><span class="w"> </span><span class="n">Include</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">envSetVal</span><span class="p">(</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">command</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="o">.</span><span class="n">cdsinit</span><span class="w"> </span><span class="n">file</span><span class="w"></span>
-<span class="n">envSetVal</span><span class="p">(</span><span class="s2">&quot;layoutXL&quot;</span><span class="w"> </span><span class="s2">&quot;chainFolds&quot;</span><span class="w"> </span><span class="s1">&#39;boolean t)</span>
-<span class="n">For</span><span class="w"> </span><span class="n">more</span><span class="w"> </span><span class="n">information</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="o">.</span><span class="n">cdsenv</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="o">.</span><span class="n">cdsinit</span><span class="w"> </span><span class="n">files</span><span class="p">,</span><span class="w"> </span><span class="n">see</span><span class="w"> </span><span class="n">Environment</span><span class="w"> </span><span class="n">Variables</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span>
-<span class="n">Virtuoso</span><span class="w"> </span><span class="n">Layout</span><span class="w"> </span><span class="n">Suite</span><span class="w"> </span><span class="n">L</span><span class="w"> </span><span class="n">User</span><span class="w"> </span><span class="n">Guide</span><span class="o">.</span><span class="w"></span>
-</code></pre></div>
-
-<p><span class="caps">CIW</span> 运行 <code>envSetVal()</code>命令用于设置current session&nbsp;的环境变量</p>
-<div class="highlight"><pre><span></span><code><span class="n">envSetVal</span><span class="p">(</span><span class="s2">&quot;layoutXL&quot;</span><span class="w"> </span><span class="s2">&quot;chainFolds&quot;</span><span class="w"> </span><span class="s1">&#39;boolean t); eg:to set the Layout XL chainFolds variable</span>
-
-<span class="n">envGetVal</span><span class="p">(</span><span class="s2">&quot;layoutXL&quot;</span><span class="w"> </span><span class="s2">&quot;chainFolds&quot;</span><span class="p">);</span><span class="w"> </span><span class="n">To</span><span class="w"> </span><span class="n">determine</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">current</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">any</span><span class="w"> </span><span class="n">Layout</span><span class="w"> </span><span class="n">XL</span><span class="w"> </span><span class="n">environment</span><span class="w"> </span><span class="n">variable</span><span class="p">,</span><span class="w"> </span><span class="n">type</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">following</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span>
-<span class="n">the</span><span class="w"> </span><span class="n">CIW</span><span class="o">.</span><span class="w"></span>
-</code></pre></div>
-
-<p><img alt="Display setting" src="../images/notes/vo/settingDisplayColors.png"></p>
+<blockquote>
+<p>主要用于cadence virtuoso layout suit <span class="caps">XL</span> user guide 的文档学习
+Product version <span class="caps">IC6</span>.1.7</p>
+</blockquote>
+<h2>内容目录</h2>
+<ol>
+<li>Layout <span class="caps">XL</span>&nbsp;启动</li>
+<li>启动方式</li>
+<li>桌面</li>
+<li>窗口</li>
+<li>环境变量设置</li>
+<li>显示和选择控制</li>
+<li>工艺文件要求</li>
+<li>Editor&nbsp;rules</li>
+<li>layer&nbsp;Definition</li>
+<li>layer&nbsp;rules</li>
+<li>Constraint&nbsp;groups</li>
+<li>devices</li>
+<li>physical&nbsp;rules</li>
+<li>connectivity&nbsp;rules</li>
+<li>准备源电路连接</li>
+<li>电路设计元素</li>
+<li>设计变量</li>
+<li>设计约束</li>
+<li>一对多映射</li>
+<li>XL中的属性</li>
+<li>XL中的PIN和PIN名</li>
+<li>设置物理层次(<span class="caps">CPH</span>)</li>
+<li><span class="caps">LAM</span>&nbsp;文件和设置界面</li>
+<li>schema&nbsp;数据转换</li>
+<li>启动设置物理层次</li>
+<li>层次设计模式</li>
+<li>组件类型模式</li>
+<li>软模块模式</li>
+<li>器件接合</li>
+<li><span class="caps">XL</span>&nbsp;接合要求</li>
+<li>Pcells&nbsp;设置</li>
+<li>手动器件接合</li>
+<li>自动器件接合</li>
+<li>接合debug</li>
+<li>接合和virtuoso内联布线</li>
+<li>先进节点的dummy图形接合</li>
+<li>接合功能流程</li>
+<li>生成layout</li>
+<li>命名惯例</li>
+<li>约束转换</li>
+<li>布局布线边界</li>
+<li>从源生成所有组件</li>
+<li>使用skill生成组件</li>
+<li>生成clones</li>
+<li>生成同步clones</li>
+<li>生成同步copy</li>
+<li>生成dummy&nbsp;instances</li>
+<li>生成mosaic&nbsp;instances</li>
+<li>生成参数化layout单元</li>
+<li>生成非参数化layout单元</li>
+<li>生成透明的布局层次结构</li>
+<li>从其他cellview加载物理信息</li>
+<li>伪平行连接的定义</li>
+<li>编辑layout</li>
+<li>提取设计连接</li>
+<li>检查设计数据</li>
+<li>更新设计数据</li>
+<li>XL故障排除</li>
+<li>A. <span class="caps">XL</span>&nbsp;环境变量</li>
+<li>B.&nbsp;命令快速参考</li>
+<li>C. <span class="caps">XL</span>&nbsp;属性</li>
+<li>D. <span class="caps">XL</span>&nbsp;界面</li>
+<li>E.&nbsp;库与属性映射文件语法</li>
+<li>F. <span class="caps">XL</span>&nbsp;助手</li>
+</ol>
+<h2>Getting Started with Layout <span class="caps">XL</span></h2>
+<h2>Technology File Requirements for Layout <span class="caps">XL</span></h2>
+<h2>Preparing Your Connectivity&nbsp;Source</h2>
+<h2>Configuring the Physical Hierarchy (<span class="caps">CPH</span>)</h2>
+<blockquote>
+<p>Configure Physical Hierarchy (<span class="caps">CPH</span>) is a physical hierarchy configuration utility that lets you specify how a layout implementation is generated from a specific schematic (or from a mixedsignal, schematic and Verilog-driven)&nbsp;design.</p>
+</blockquote>
+<h3>1.&nbsp;三种操作模式</h3>
 <ul>
-<li>Preselect Mode / Editing commands do not automatically repeat, even if the Repeat Commands option 
-is switched on in the Layout Editor Options&nbsp;form.</li>
-<li>Postselect&nbsp;Mode </li>
-<li>one pair of schematic-layout&nbsp;windows</li>
+<li>Hierarchy Configuration Mode&nbsp;(层次配置模式)</li>
+<li>Component Types Mode&nbsp;(构件类型模式)</li>
+<li>Soft Block Mode&nbsp;(软模块模式)</li>
 </ul>
-<p><img alt="prtCIW" src="../images/notes/vo/prtCIW.png"></p>
+<h3>2. <span class="caps">LAM</span> Files and Configuration&nbsp;Views</h3>
+<p>Layout <span class="caps">XL</span> schema&nbsp;(CPH功能的基础)包含两种数据格式</p>
 <ul>
-<li>
-<p>Layout Editor Rules The <code>leRules</code> section of the technology file specifies the layers that are listed in the Layer 
-Selection Window (<span class="caps">LSW</span>) assistant and the order in which they are listed. For more 
-information, see Virtuoso Technology Data <span class="caps">ASCII</span> Files&nbsp;Reference.</p>
-</li>
-<li>
-<p>Layer Definitions The <code>layerDefinitions</code> section of the technology file defines the layers used in the current 
-technology. All the layers used in your design must be defined in this section. For more 
-information, see “Technology File Layer Definitions” in the Virtuoso Technology Data 
-<span class="caps">ASCII</span> Files Reference.
-<img alt="techDataRequire" src="../images/notes/vo/techDataRequire.png">
-<img alt="layerrules" src="../images/notes/vo/layerrules.png">
-<img alt="sirce" src="../images/notes/vo/sirce.png">
-<img alt="devices" src="../images/notes/vo/devices.png">
-<img alt="phyrules" src="../images/notes/vo/phyrules.png"></p>
-</li>
-<li>
-<p>Each physical layer must be defined in the layerRules section of the technology file, 
-whereas each derived layer must be defined in the techDerivedLayers&nbsp;section.</p>
-</li>
-<li>
-<p>a layer-purpose pair
-<img alt="lpa" src=""></p>
+<li>library and attributes mapping file(<span class="caps">LAM</span> 库与属性映射文件) <blockquote>
+<p>For schematic and layout library&nbsp;data</p>
+</blockquote>
 </li>
 </ul>
+<p>存储驱动布局生成的符号属性、给定库的组件类型信息以及库与单元级映射信息。
+called<code>cph.lam</code> location <code>library/.cadence/dfII/cph/lam/cph.lam</code>
+* </p>
+<h2>Device&nbsp;Abutment</h2>
+<h2>Generating a&nbsp;Layout</h2>
+<h2>Editing the <em>Layout</em></h2>
+<h2>Extracting Design&nbsp;Connectivity</h2>
+<h2>Checking Design&nbsp;Data</h2>
+<h2>Updating Design&nbsp;Data</h2>
+<h2>Troubleshooting Layout <span class="caps">XL</span></h2>
     <!-- <div class="aspect-w-16 aspect-h-9 mx-auto"></div> CSS placeholder -->
   </div>
   <footer class="flex flex-col mt-10 ">

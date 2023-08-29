@@ -1,61 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Hi,Rg</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2023-08-11T19:00:00+08:00</updated><entry><title>cadence学习笔记</title><link href="/cadence_learn.html" rel="alternate"></link><published>2023-08-11T19:00:00+08:00</published><updated>2023-08-11T19:00:00+08:00</updated><author><name>RongChuan</name></author><id>tag:None,2023-08-11:/cadence_learn.html</id><summary type="html">&lt;p&gt;cadence&amp;nbsp;learn&lt;/p&gt;</summary><content type="html">&lt;h1&gt;cadence学习笔记&lt;/h1&gt;
 &lt;h2&gt;1.CDBA与Open&amp;nbsp;Access&lt;/h2&gt;</content><category term="notes"></category><category term="virtuoso"></category><category term="candence"></category></entry><entry><title>virtuoso学习笔记</title><link href="/virtuoso_learn.html" rel="alternate"></link><published>2023-07-20T19:00:00+08:00</published><updated>2023-08-02T19:00:00+08:00</updated><author><name>RongChuan</name></author><id>tag:None,2023-07-20:/virtuoso_learn.html</id><summary type="html">&lt;p&gt;virtuoso&amp;nbsp;learn&lt;/p&gt;</summary><content type="html">&lt;h1&gt;virtuoso&amp;nbsp;学习笔记&lt;/h1&gt;
-&lt;h2&gt;随记&lt;/h2&gt;
-&lt;p&gt;设置.cdsenv or .cdsinit 文件以设置环境变量用于Layout &lt;span class="caps"&gt;XL&lt;/span&gt;&amp;nbsp;启动时&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;Setting&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Environment&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Variables&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;in&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cdsenv&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;or&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cdsinit&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;File&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;To&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;have&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;your&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;environment&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;variables&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;set&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;automatically&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;when&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;you&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;start&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Layout&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;XL&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;do&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;one&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;of&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;
-&lt;span class="n"&gt;following&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Include&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;environment&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;variables&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;in&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cdsenv&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;file&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;in&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;your&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;home&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;directory&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;
-&lt;span class="n"&gt;example&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;layoutXL&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;chainFolds&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;boolean&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Include&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;an&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;envSetVal&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;command&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;in&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;your&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cdsinit&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;file&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;span class="n"&gt;envSetVal&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;layoutXL&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;chainFolds&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;boolean t)&lt;/span&gt;
-&lt;span class="n"&gt;For&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;more&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;information&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;on&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cdsenv&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;and&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cdsinit&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;files&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;see&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Environment&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Variables&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;in&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;
-&lt;span class="n"&gt;Virtuoso&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Layout&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Suite&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;L&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;User&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Guide&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;span class="caps"&gt;CIW&lt;/span&gt; 运行 &lt;code&gt;envSetVal()&lt;/code&gt;命令用于设置current session&amp;nbsp;的环境变量&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="n"&gt;envSetVal&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;layoutXL&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;chainFolds&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;boolean t); eg:to set the Layout XL chainFolds variable&lt;/span&gt;
-
-&lt;span class="n"&gt;envGetVal&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;layoutXL&amp;quot;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;chainFolds&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;To&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;determine&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;current&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;of&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;any&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;Layout&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;XL&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;environment&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;variable&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;type&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;following&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="ow"&gt;in&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;
-&lt;span class="n"&gt;the&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;CIW&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="w"&gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;img alt="Display setting" src="../images/notes/vo/settingDisplayColors.png"&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;主要用于cadence virtuoso layout suit &lt;span class="caps"&gt;XL&lt;/span&gt; user guide 的文档学习
+Product version &lt;span class="caps"&gt;IC6&lt;/span&gt;.1.7&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;内容目录&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Layout &lt;span class="caps"&gt;XL&lt;/span&gt;&amp;nbsp;启动&lt;/li&gt;
+&lt;li&gt;启动方式&lt;/li&gt;
+&lt;li&gt;桌面&lt;/li&gt;
+&lt;li&gt;窗口&lt;/li&gt;
+&lt;li&gt;环境变量设置&lt;/li&gt;
+&lt;li&gt;显示和选择控制&lt;/li&gt;
+&lt;li&gt;工艺文件要求&lt;/li&gt;
+&lt;li&gt;Editor&amp;nbsp;rules&lt;/li&gt;
+&lt;li&gt;layer&amp;nbsp;Definition&lt;/li&gt;
+&lt;li&gt;layer&amp;nbsp;rules&lt;/li&gt;
+&lt;li&gt;Constraint&amp;nbsp;groups&lt;/li&gt;
+&lt;li&gt;devices&lt;/li&gt;
+&lt;li&gt;physical&amp;nbsp;rules&lt;/li&gt;
+&lt;li&gt;connectivity&amp;nbsp;rules&lt;/li&gt;
+&lt;li&gt;准备源电路连接&lt;/li&gt;
+&lt;li&gt;电路设计元素&lt;/li&gt;
+&lt;li&gt;设计变量&lt;/li&gt;
+&lt;li&gt;设计约束&lt;/li&gt;
+&lt;li&gt;一对多映射&lt;/li&gt;
+&lt;li&gt;XL中的属性&lt;/li&gt;
+&lt;li&gt;XL中的PIN和PIN名&lt;/li&gt;
+&lt;li&gt;设置物理层次(&lt;span class="caps"&gt;CPH&lt;/span&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;LAM&lt;/span&gt;&amp;nbsp;文件和设置界面&lt;/li&gt;
+&lt;li&gt;schema&amp;nbsp;数据转换&lt;/li&gt;
+&lt;li&gt;启动设置物理层次&lt;/li&gt;
+&lt;li&gt;层次设计模式&lt;/li&gt;
+&lt;li&gt;组件类型模式&lt;/li&gt;
+&lt;li&gt;软模块模式&lt;/li&gt;
+&lt;li&gt;器件接合&lt;/li&gt;
+&lt;li&gt;&lt;span class="caps"&gt;XL&lt;/span&gt;&amp;nbsp;接合要求&lt;/li&gt;
+&lt;li&gt;Pcells&amp;nbsp;设置&lt;/li&gt;
+&lt;li&gt;手动器件接合&lt;/li&gt;
+&lt;li&gt;自动器件接合&lt;/li&gt;
+&lt;li&gt;接合debug&lt;/li&gt;
+&lt;li&gt;接合和virtuoso内联布线&lt;/li&gt;
+&lt;li&gt;先进节点的dummy图形接合&lt;/li&gt;
+&lt;li&gt;接合功能流程&lt;/li&gt;
+&lt;li&gt;生成layout&lt;/li&gt;
+&lt;li&gt;命名惯例&lt;/li&gt;
+&lt;li&gt;约束转换&lt;/li&gt;
+&lt;li&gt;布局布线边界&lt;/li&gt;
+&lt;li&gt;从源生成所有组件&lt;/li&gt;
+&lt;li&gt;使用skill生成组件&lt;/li&gt;
+&lt;li&gt;生成clones&lt;/li&gt;
+&lt;li&gt;生成同步clones&lt;/li&gt;
+&lt;li&gt;生成同步copy&lt;/li&gt;
+&lt;li&gt;生成dummy&amp;nbsp;instances&lt;/li&gt;
+&lt;li&gt;生成mosaic&amp;nbsp;instances&lt;/li&gt;
+&lt;li&gt;生成参数化layout单元&lt;/li&gt;
+&lt;li&gt;生成非参数化layout单元&lt;/li&gt;
+&lt;li&gt;生成透明的布局层次结构&lt;/li&gt;
+&lt;li&gt;从其他cellview加载物理信息&lt;/li&gt;
+&lt;li&gt;伪平行连接的定义&lt;/li&gt;
+&lt;li&gt;编辑layout&lt;/li&gt;
+&lt;li&gt;提取设计连接&lt;/li&gt;
+&lt;li&gt;检查设计数据&lt;/li&gt;
+&lt;li&gt;更新设计数据&lt;/li&gt;
+&lt;li&gt;XL故障排除&lt;/li&gt;
+&lt;li&gt;A. &lt;span class="caps"&gt;XL&lt;/span&gt;&amp;nbsp;环境变量&lt;/li&gt;
+&lt;li&gt;B.&amp;nbsp;命令快速参考&lt;/li&gt;
+&lt;li&gt;C. &lt;span class="caps"&gt;XL&lt;/span&gt;&amp;nbsp;属性&lt;/li&gt;
+&lt;li&gt;D. &lt;span class="caps"&gt;XL&lt;/span&gt;&amp;nbsp;界面&lt;/li&gt;
+&lt;li&gt;E.&amp;nbsp;库与属性映射文件语法&lt;/li&gt;
+&lt;li&gt;F. &lt;span class="caps"&gt;XL&lt;/span&gt;&amp;nbsp;助手&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;Getting Started with Layout &lt;span class="caps"&gt;XL&lt;/span&gt;&lt;/h2&gt;
+&lt;h2&gt;Technology File Requirements for Layout &lt;span class="caps"&gt;XL&lt;/span&gt;&lt;/h2&gt;
+&lt;h2&gt;Preparing Your Connectivity&amp;nbsp;Source&lt;/h2&gt;
+&lt;h2&gt;Configuring the Physical Hierarchy (&lt;span class="caps"&gt;CPH&lt;/span&gt;)&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Configure Physical Hierarchy (&lt;span class="caps"&gt;CPH&lt;/span&gt;) is a physical hierarchy configuration utility that lets you specify how a layout implementation is generated from a specific schematic (or from a mixedsignal, schematic and Verilog-driven)&amp;nbsp;design.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;1.&amp;nbsp;三种操作模式&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Preselect Mode / Editing commands do not automatically repeat, even if the Repeat Commands option 
-is switched on in the Layout Editor Options&amp;nbsp;form.&lt;/li&gt;
-&lt;li&gt;Postselect&amp;nbsp;Mode &lt;/li&gt;
-&lt;li&gt;one pair of schematic-layout&amp;nbsp;windows&lt;/li&gt;
+&lt;li&gt;Hierarchy Configuration Mode&amp;nbsp;(层次配置模式)&lt;/li&gt;
+&lt;li&gt;Component Types Mode&amp;nbsp;(构件类型模式)&lt;/li&gt;
+&lt;li&gt;Soft Block Mode&amp;nbsp;(软模块模式)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img alt="prtCIW" src="../images/notes/vo/prtCIW.png"&gt;&lt;/p&gt;
+&lt;h3&gt;2. &lt;span class="caps"&gt;LAM&lt;/span&gt; Files and Configuration&amp;nbsp;Views&lt;/h3&gt;
+&lt;p&gt;Layout &lt;span class="caps"&gt;XL&lt;/span&gt; schema&amp;nbsp;(CPH功能的基础)包含两种数据格式&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Layout Editor Rules The &lt;code&gt;leRules&lt;/code&gt; section of the technology file specifies the layers that are listed in the Layer 
-Selection Window (&lt;span class="caps"&gt;LSW&lt;/span&gt;) assistant and the order in which they are listed. For more 
-information, see Virtuoso Technology Data &lt;span class="caps"&gt;ASCII&lt;/span&gt; Files&amp;nbsp;Reference.&lt;/p&gt;
+&lt;li&gt;library and attributes mapping file(&lt;span class="caps"&gt;LAM&lt;/span&gt; 库与属性映射文件) &lt;blockquote&gt;
+&lt;p&gt;For schematic and layout library&amp;nbsp;data&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Layer Definitions The &lt;code&gt;layerDefinitions&lt;/code&gt; section of the technology file defines the layers used in the current 
-technology. All the layers used in your design must be defined in this section. For more 
-information, see “Technology File Layer Definitions” in the Virtuoso Technology Data 
-&lt;span class="caps"&gt;ASCII&lt;/span&gt; Files Reference.
-&lt;img alt="techDataRequire" src="../images/notes/vo/techDataRequire.png"&gt;
-&lt;img alt="layerrules" src="../images/notes/vo/layerrules.png"&gt;
-&lt;img alt="sirce" src="../images/notes/vo/sirce.png"&gt;
-&lt;img alt="devices" src="../images/notes/vo/devices.png"&gt;
-&lt;img alt="phyrules" src="../images/notes/vo/phyrules.png"&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Each physical layer must be defined in the layerRules section of the technology file, 
-whereas each derived layer must be defined in the techDerivedLayers&amp;nbsp;section.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;a layer-purpose pair
-&lt;img alt="lpa" src=""&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;</content><category term="notes"></category><category term="virtuoso"></category><category term="candence"></category></entry><entry><title>NFC 基础</title><link href="/nfc_method.html" rel="alternate"></link><published>2023-06-08T19:00:00+08:00</published><updated>2023-06-08T19:00:00+08:00</updated><author><name>RongChuan</name></author><id>tag:None,2023-06-08:/nfc_method.html</id><summary type="html">&lt;p&gt;Basic knowledge of&amp;nbsp;nfc&lt;/p&gt;</summary><content type="html">&lt;h1&gt;&lt;span class="caps"&gt;NFC&lt;/span&gt;&amp;nbsp;基础&lt;/h1&gt;
+&lt;/ul&gt;
+&lt;p&gt;存储驱动布局生成的符号属性、给定库的组件类型信息以及库与单元级映射信息。
+called&lt;code&gt;cph.lam&lt;/code&gt; location &lt;code&gt;library/.cadence/dfII/cph/lam/cph.lam&lt;/code&gt;
+* &lt;/p&gt;
+&lt;h2&gt;Device&amp;nbsp;Abutment&lt;/h2&gt;
+&lt;h2&gt;Generating a&amp;nbsp;Layout&lt;/h2&gt;
+&lt;h2&gt;Editing the &lt;em&gt;Layout&lt;/em&gt;&lt;/h2&gt;
+&lt;h2&gt;Extracting Design&amp;nbsp;Connectivity&lt;/h2&gt;
+&lt;h2&gt;Checking Design&amp;nbsp;Data&lt;/h2&gt;
+&lt;h2&gt;Updating Design&amp;nbsp;Data&lt;/h2&gt;
+&lt;h2&gt;Troubleshooting Layout &lt;span class="caps"&gt;XL&lt;/span&gt;&lt;/h2&gt;</content><category term="notes"></category><category term="virtuoso"></category><category term="candence"></category></entry><entry><title>NFC 基础</title><link href="/nfc_method.html" rel="alternate"></link><published>2023-06-08T19:00:00+08:00</published><updated>2023-06-08T19:00:00+08:00</updated><author><name>RongChuan</name></author><id>tag:None,2023-06-08:/nfc_method.html</id><summary type="html">&lt;p&gt;Basic knowledge of&amp;nbsp;nfc&lt;/p&gt;</summary><content type="html">&lt;h1&gt;&lt;span class="caps"&gt;NFC&lt;/span&gt;&amp;nbsp;基础&lt;/h1&gt;
 &lt;h2&gt;&lt;span class="caps"&gt;NFC&lt;/span&gt;&amp;nbsp;通信基础&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;发起方&lt;/li&gt;
