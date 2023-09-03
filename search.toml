@@ -13,6 +13,11 @@ url = "/pages/events.html"
 title = "Events"
 
 [[input.files]]
+path = "latch_up_io_esd_learn.html"
+url = "/latch_up_io_esd_learn.html"
+title = "Layout Guidelines for Latch-up and IO ESD"
+
+[[input.files]]
 path = "cadence_learn.html"
 url = "/cadence_learn.html"
 title = "cadence学习笔记"

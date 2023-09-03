@@ -1,5 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Hi,Rg</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2023-08-11T19:00:00+08:00</updated><entry><title>cadence学习笔记</title><link href="/cadence_learn.html" rel="alternate"></link><published>2023-08-11T19:00:00+08:00</published><updated>2023-08-11T19:00:00+08:00</updated><author><name>RongChuan</name></author><id>tag:None,2023-08-11:/cadence_learn.html</id><summary type="html">&lt;p&gt;cadence&amp;nbsp;learn&lt;/p&gt;</summary><content type="html">&lt;h1&gt;cadence学习笔记&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Hi,Rg</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2023-09-03T19:00:00+08:00</updated><entry><title>Layout Guidelines for Latch-up and IO ESD</title><link href="/latch_up_io_esd_learn.html" rel="alternate"></link><published>2023-08-20T19:00:00+08:00</published><updated>2023-09-03T19:00:00+08:00</updated><author><name>RongChuan</name></author><id>tag:None,2023-08-20:/latch_up_io_esd_learn.html</id><summary type="html">&lt;p&gt;latch-up io esd&amp;nbsp;learn&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Layout Guidelines for Latch-up and &lt;span class="caps"&gt;IO&lt;/span&gt; &lt;span class="caps"&gt;ESD&lt;/span&gt;&lt;/h1&gt;
+&lt;h2&gt;1.Latch-up&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;latch-up (闩锁效应)是一种在电源引脚和地之间建立一条低阻抗通路的效应，这种情况是由电流注入或过电压引起的，这种低阻抗通路可能会因为过大的电流水平而导致芯片失效。在CMOS集成电路设计中，形成NMOS和PMOS晶体管的PN结的相邻而产生了固有的寄生晶体管和二极管。这些寄生结构产生PNPN晶闸管(&lt;code&gt;PNPN thyristors&lt;/code&gt;),也称为可控硅整流器(&lt;code&gt;silicon-controlled rectifiers&lt;/code&gt;,&lt;span class="caps"&gt;SCRS&lt;/span&gt;)，在正常工作电压和电流水平之外的偏移(过冲和欠冲,overshoot and&amp;nbsp;undershoot)会触发晶闸管，并导致latch-up。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;span class="caps"&gt;TI&lt;/span&gt; latch up white papre:
+&lt;img alt="Latch-Up model" src="../images/notes/vo/image-3.png"&gt;
+&lt;img alt="temperature effects" src="../images/notes/vo/image-4.png"&gt;
+&lt;img alt="Cross-Section ofaCMOS Inverter" src="../images/notes/vo/image-2.png"&gt;
+&lt;img alt="Lateral NPN" src="../images/notes/vo/image-5.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;VT&lt;/code&gt;：vertical &lt;span class="caps"&gt;PNP&lt;/span&gt; 
+&lt;code&gt;LT&lt;/code&gt;:lateral &lt;span class="caps"&gt;NPN&lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;2.Latch-up&amp;nbsp;防护&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;添加guard ring :Guard rings actasinjected carrier syphons allowing these carriers toflowtothesupply orground.
+&lt;img alt="Guard ring" src="../images/notes/vo/image-6.png"&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;3.Latch-Up&amp;nbsp;测试方法&lt;/h2&gt;
+&lt;h3&gt;3.1 Latch-Up&amp;nbsp;标准&lt;/h3&gt;
+&lt;h2&gt;.附录&lt;/h2&gt;
+&lt;h3&gt;.3.名词解释&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;the Latch-Up immunity of products&lt;/code&gt;：抗干扰/防护&lt;/p&gt;</content><category term="notes"></category><category term="latch up"></category><category term="IO ESD"></category></entry><entry><title>cadence学习笔记</title><link href="/cadence_learn.html" rel="alternate"></link><published>2023-08-11T19:00:00+08:00</published><updated>2023-08-11T19:00:00+08:00</updated><author><name>RongChuan</name></author><id>tag:None,2023-08-11:/cadence_learn.html</id><summary type="html">&lt;p&gt;cadence&amp;nbsp;learn&lt;/p&gt;</summary><content type="html">&lt;h1&gt;cadence学习笔记&lt;/h1&gt;
 &lt;h2&gt;1.CDBA与Open&amp;nbsp;Access&lt;/h2&gt;</content><category term="notes"></category><category term="virtuoso"></category><category term="candence"></category></entry><entry><title>virtuoso学习笔记</title><link href="/virtuoso_learn.html" rel="alternate"></link><published>2023-07-20T19:00:00+08:00</published><updated>2023-08-02T19:00:00+08:00</updated><author><name>RongChuan</name></author><id>tag:None,2023-07-20:/virtuoso_learn.html</id><summary type="html">&lt;p&gt;virtuoso&amp;nbsp;learn&lt;/p&gt;</summary><content type="html">&lt;h1&gt;virtuoso&amp;nbsp;学习笔记&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;p&gt;主要用于cadence virtuoso layout suit &lt;span class="caps"&gt;XL&lt;/span&gt; user guide 的文档学习
