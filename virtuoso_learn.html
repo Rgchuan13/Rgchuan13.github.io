@@ -199,6 +199,16 @@ Product version <span class="caps">IC6</span>.1.7</p>
 </ol>
 <h2>Getting Started with Layout <span class="caps">XL</span></h2>
 <h2>Technology File Requirements for Layout <span class="caps">XL</span></h2>
+<h3>1.File</h3>
+<ul>
+<li>Layout Editor&nbsp;Rules</li>
+<li>Layer&nbsp;Definition</li>
+<li>Layer&nbsp;Rules</li>
+<li>Constraint&nbsp;groups</li>
+<li>devices</li>
+<li>physical&nbsp;rules</li>
+<li>connectivity&nbsp;rules</li>
+</ul>
 <h2>Preparing Your Connectivity&nbsp;Source</h2>
 <h2>Configuring the Physical Hierarchy (<span class="caps">CPH</span>)</h2>
 <blockquote>
@@ -219,15 +229,68 @@ Product version <span class="caps">IC6</span>.1.7</p>
 </li>
 </ul>
 <p>存储驱动布局生成的符号属性、给定库的组件类型信息以及库与单元级映射信息。
-called<code>cph.lam</code> location <code>library/.cadence/dfII/cph/lam/cph.lam</code>
-* </p>
+called<code>cph.lam</code> location <code>library/.cadence/dfII/cph/lam/cph.lam</code></p>
+<ul>
+<li>physical configuration (physConfig) view<blockquote>
+<p>For layout design data
+存储有<code>design-specific overrides</code>fiels，包含：</p>
+</blockquote>
+</li>
+<li>the schematic expansion rules that drive layout&nbsp;generation; </li>
+<li>design component&nbsp;types; </li>
+<li>cell and instance mapping&nbsp;rules</li>
+</ul>
+<h3>3.legac ydata&nbsp;conversion</h3>
+<p><img alt="data conversion" src="../images/notes/vo/image-1.png"></p>
+<ul>
+<li>A schematic library conversion (indicated by the top three arrows in the picture&nbsp;above)</li>
+<li>Migration path&nbsp;(automatically)</li>
+<li>the utility described in Converting Schematic Libraries and Designs&nbsp;(utility)</li>
+<li>A layout design conversion (indicated by the bottom two arrows in the picture&nbsp;above)</li>
+<li>run auto when load&nbsp;design</li>
+<li><code>cphUprevDesign</code> skill function&nbsp;(manually)</li>
+</ul>
 <h2>Device&nbsp;Abutment</h2>
+<h3>1. Mirroring and Pin Permutation During&nbsp;Abutment</h3>
+<p>If an attempt to abut two devices causes two pins on the same net to touch, a short violation is&nbsp;created.</p>
+<p><code>autoMirror</code> and <code>autoMirrorChains</code> environment variables controlled this&nbsp;behavior.</p>
+<h3>2. Requirements for Abutment in Layout <span class="caps">XL</span></h3>
+<ul>
+<li>The abutment engine is&nbsp;enabled.</li>
+<li>Both instances must be pcells set up for abutment or cells with the appropriate abutment properties set. For more information, see “Setting Up Pcells for&nbsp;Abutment”</li>
+<li>Both instances must share the same master or must have the abutClass property set
+If two instances have the same master, then they can be abutted, even if the abutClass is set to different values on each instances. To abut two cells with different masters, you must add the abutClass property to the pin of each cell and enter the same abutment class name as the value for each property. For more information, see About Pcell Super and Submaster Cells in the Virtuoso Layout Suite <span class="caps">SKILL</span>&nbsp;Reference</li>
+<li>The instances must&nbsp;overlap.</li>
+<li>Both instance pins must be connected to the same&nbsp;net.</li>
+<li>Both instance pins must be defined on shapes of the same layer or on layers that are defined as equivalent layers in the technology&nbsp;file.</li>
+<li>Both instance pins can have the same abutment direction if the rotation of one (but not both) of the pins is either R180 or <span class="caps">MY</span>, or any other rotation that transforms the left-hand side to the right-hand&nbsp;side.</li>
+<li>During placement, the Connectivity extractor and Abut transistors options in the Layout <span class="caps">XL</span> Options form must be turned on. When the Abut transistors option is turned on, devices that have not been abutted but are overlapping are abutted. If the devices are already abutted, autoAbutment does not re-abut the&nbsp;devices.</li>
+<li>If one of the instances is in any type of group (including a synchronous clone), the other instance must be in the same&nbsp;group.</li>
+</ul>
 <h2>Generating a&nbsp;Layout</h2>
-<h2>Editing the <em>Layout</em></h2>
+<h3>Generating Selected Components form&nbsp;source</h3>
+<p>You can select the components to be generated either from the schematic canvas or from the <code>Ungenerated</code> instances list in the <code>Navigator assistant</code>.</p>
+<h3>Generating&nbsp;Clones</h3>
+<ul>
+<li>replicate a section of the&nbsp;layout</li>
+<li>each part preserving the hierarchical structure of the&nbsp;design.</li>
+<li>cloneed structure maintain its schematic correspondence and inherits the connectivity&nbsp;information.</li>
+</ul>
+<p>Layout <span class="caps">XL</span> also supports clone creation by setting a <code>clone Famliy</code> in the <code>constraint Manager</code> :<code>Virtuoso Unified Custom Constraints User Guide</code></p>
+<h2>Editing the&nbsp;Layout</h2>
 <h2>Extracting Design&nbsp;Connectivity</h2>
 <h2>Checking Design&nbsp;Data</h2>
 <h2>Updating Design&nbsp;Data</h2>
 <h2>Troubleshooting Layout <span class="caps">XL</span></h2>
+<h2>附录</h2>
+<h3>.1.文件类型</h3>
+<ul>
+<li><code>cds.lib</code>: the&nbsp;currentlibrarydefinition</li>
+</ul>
+<h3>.2.缩写解释</h3>
+<ul>
+<li><code>CPH</code>:Configuring the Physical&nbsp;Hierarchy</li>
+</ul>
     <!-- <div class="aspect-w-16 aspect-h-9 mx-auto"></div> CSS placeholder -->
   </div>
   <footer class="flex flex-col mt-10 ">
