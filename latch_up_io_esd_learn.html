@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content="Pelican" />
-    <title>Layout Guidelines for Latch-up and IO ESD</title>
+    <title>Layout Guidelines for Latch-up</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab|Ruda" />
     <link rel="stylesheet" type="text/css" href="/theme/css/main.css" />
@@ -94,7 +94,7 @@
 
 <main>
   <header>
-    <h1 class="font-semibold text-3xl my-2">Layout Guidelines for Latch-up and <span class="caps">IO</span> <span class="caps">ESD</span></h1>
+    <h1 class="font-semibold text-3xl my-2">Layout Guidelines for&nbsp;Latch-up</h1>
     <footer class="flex text-sm text-zinc-800 dark:text-zinc-400">
       <div class="flex text-xs text-zinc-800 dark:text-zinc-400">
         <time>八月 20, 2023</time>
@@ -125,25 +125,105 @@
               prose-code:font-light
               prose-img:rounded-md
               ">
-    <h1>Layout Guidelines for Latch-up and <span class="caps">IO</span> <span class="caps">ESD</span></h1>
+    <h1>Layout Guidelines for&nbsp;Latch-up</h1>
 <h2>1.Latch-up</h2>
-<blockquote>
-<p>latch-up (闩锁效应)是一种在电源引脚和地之间建立一条低阻抗通路的效应，这种情况是由电流注入或过电压引起的，这种低阻抗通路可能会因为过大的电流水平而导致芯片失效。在CMOS集成电路设计中，形成NMOS和PMOS晶体管的PN结的相邻而产生了固有的寄生晶体管和二极管。这些寄生结构产生PNPN晶闸管(<code>PNPN thyristors</code>),也称为可控硅整流器(<code>silicon-controlled rectifiers</code>,<span class="caps">SCRS</span>)，在正常工作电压和电流水平之外的偏移(过冲和欠冲,overshoot and&nbsp;undershoot)会触发晶闸管，并导致latch-up。</p>
-</blockquote>
-<p><span class="caps">TI</span> latch up white papre:
-<img alt="Latch-Up model" src="../images/notes/vo/image-3.png">
+<h3>1.1 关于latch&nbsp;up的产生机理</h3>
+<p><strong>电路的角度</strong>
+latch-up (闩锁效应)是一种在电源引脚和地之间建立一条低阻抗通路的效应，这种情况是由电流注入或过电压引起的，这种低阻抗通路可能会因为过大的电流水平而导致芯片失效。在CMOS集成电路设计中，形成NMOS和PMOS晶体管的PN结的相邻而产生了固有的寄生晶体管和二极管。这些寄生结构产生PNPN晶闸管(<code>PNPN thyristors</code>),也称为可控硅整流器(<code>silicon-controlled rectifiers</code>,<span class="caps">SCRS</span>)，在正常工作电压和电流水平之外的偏移(过冲和欠冲,overshoot and&nbsp;undershoot)会触发晶闸管，并导致latch-up。</p>
+<p><strong>能带的角度</strong>
+The positive feedback loop will make the concentration of minority carrier increased to higher than the doping concentration of both the <span class="caps">NW</span> and <span class="caps">PW</span>.Subsequentli,the potential barrier between <span class="caps">NW</span> and <span class="caps">PW</span> will be disappeared and then obtains a highly conductivity path between Vdd and&nbsp;Vss. </p>
+<p><span class="caps">TI</span> latch up white&nbsp;paper:</p>
+<p><img alt="Latch-Up model" src="../images/notes/vo/image-3.png">
 <img alt="temperature effects" src="../images/notes/vo/image-4.png">
 <img alt="Cross-Section ofaCMOS Inverter" src="../images/notes/vo/image-2.png">
 <img alt="Lateral NPN" src="../images/notes/vo/image-5.png"></p>
 <p><code>VT</code>：vertical <span class="caps">PNP</span> 
 <code>LT</code>:lateral <span class="caps">NPN</span></p>
-<h2>2.Latch-up&nbsp;防护</h2>
+<h3>1.2 latch&nbsp;up的产生情况</h3>
 <ul>
-<li>添加guard ring :Guard rings actasinjected carrier syphons allowing these carriers toflowtothesupply orground.
-<img alt="Guard ring" src="../images/notes/vo/image-6.png"></li>
+<li>芯片一开始工作时VDD变化导致nwell和p substrate间寄生电容中产生足够的电流，当VDD变化率大到一定地步，将会引起Latch&nbsp;up。</li>
+<li>当I/O的信号变化超出VDD-<span class="caps">GND</span>(<span class="caps">VSS</span>)的范围时, 有大电流在芯片中产生,&nbsp;也会导致SCR的触发。</li>
+<li>ESD静电加压,可能会从保护电路中引入少量载流子到well或substrate中，引起SCR的触发。</li>
+<li>负载过大使得power和gnd突然变化，也有可能打开SCR的一个BJT </li>
+<li>well侧面漏电流过大。</li>
+</ul>
+<h2>2.Latch-up&nbsp;防护</h2>
+<h3>2.1 latch-up&nbsp;防护中的特殊定义</h3>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>I/O pads</td>
+<td>Do not inclued Vdd and Vss pad</td>
+</tr>
+<tr>
+<td>internal circuit</td>
+<td>Include <span class="caps">NMOS</span>, <span class="caps">PMOS</span>, de-coupling capacitors and varactor that do not connect to an I/O pad</td>
+</tr>
+<tr>
+<td>guard-ring</td>
+<td>Complete un-broken ring-type <span class="caps">OD</span> and M1 with <span class="caps">CO</span> as many as possible, connected to Vdd or Vss</td>
+</tr>
+<tr>
+<td>N+ guardring</td>
+<td>Complete un-broken ring-type (<span class="caps">NP</span> and <span class="caps">OD</span>) and M1 with <span class="caps">CO</span> as many as possible, connected to Vdd</td>
+</tr>
+<tr>
+<td>P+ guardring</td>
+<td>Complete un-broken ring-type (<span class="caps">PP</span> and <span class="caps">OD</span>) and M1 with <span class="caps">CO</span> as many as possible, connected to Vss</td>
+</tr>
+<tr>
+<td><span class="caps">NMOS</span> cluster</td>
+<td>A group of NMOSs that directly connected to I/O pads</td>
+</tr>
+<tr>
+<td><span class="caps">PMOS</span> cluster</td>
+<td>A group of PMOSs that directly connected to I/O pads</td>
+</tr>
+</tbody>
+</table>
+<h3>2.2 防止Latch&nbsp;up的方法</h3>
+<ul>
+<li>
+<p>添加guard ring :Guard rings actasinjected carrier syphons allowing these carriers toflowtothesupply orground.
+<img alt="Guard ring" src="../images/notes/vo/image-6.png"></p>
+</li>
+<li>
+<p>Please separate the internal circuit and capacitor by a P+ strap to inhibit the displacement current to induce the latch&nbsp;up</p>
+</li>
+<li>
+<p>在基体上改变金属的掺杂,降低BJT的增益</p>
+</li>
+<li>
+<p>避免source和drain的正向偏压</p>
+</li>
+<li>
+<p>增加一个轻掺杂的layer在重掺杂的sub上，阻止侧面电流从垂直BJT到低阻sub上的通路</p>
+</li>
+<li>
+<p>使用guard ring ：降低Rwell&nbsp;和Rsub的阻值、阻止载流子到达基极</p>
+</li>
+<li>
+<p>sub contact 和well&nbsp;contact应尽量靠近source，以降低Rwell和Rsub的阻值</p>
+</li>
+<li>
+<p>nmos尽量靠经GND,pmos尽量靠经VDD，保持足够的距离</p>
+</li>
+<li>
+<p>除在IO处需要采取防latch up&nbsp;措施外，接IO的内部MOS也应圈guardring</p>
+</li>
+<li>
+<p>IO处尽量不使用PMOS(nwell)</p>
+</li>
 </ul>
 <h2>3.Latch-Up&nbsp;测试方法</h2>
 <h3>3.1 Latch-Up&nbsp;标准</h3>
+<p><span class="caps">JEDEC78A</span></p>
 <h2>.附录</h2>
 <h3>.3.名词解释</h3>
 <p><code>the Latch-Up immunity of products</code>：抗干扰/防护</p>

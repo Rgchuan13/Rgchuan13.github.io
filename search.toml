@@ -15,7 +15,7 @@ title = "Events"
 [[input.files]]
 path = "latch_up_io_esd_learn.html"
 url = "/latch_up_io_esd_learn.html"
-title = "Layout Guidelines for Latch-up and IO ESD"
+title = "Layout Guidelines for Latch-up"
 
 [[input.files]]
 path = "cadence_learn.html"
